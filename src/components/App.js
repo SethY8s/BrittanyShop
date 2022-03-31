@@ -1,5 +1,4 @@
-
-import NavBar from "./navbar/NavBar";
+import NavBar from "./NavBar/NavBar";
 
 function App() {
   return <div className="App">
