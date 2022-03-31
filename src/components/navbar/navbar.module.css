@@ -1,9 +1,8 @@
 .art{
     Font-Family: 'Old Standard TT', Serif;
-Font-Size: 48px;
+Font-Size: 40px;
 }
 
-.cartBTN{
-    border: 2px solid black;
-    margin-left: auto;
+.cartbtn{
+    justify-content: flex-end;
 }
