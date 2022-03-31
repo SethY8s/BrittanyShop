@@ -2,3 +2,8 @@
     Font-Family: 'Old Standard TT', Serif;
 Font-Size: 48px;
 }
+
+.cartBTN{
+    border: 2px solid black;
+    margin-left: auto;
+}
