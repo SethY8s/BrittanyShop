@@ -1,8 +1,51 @@
-.art{
-    Font-Family: 'Old Standard TT', Serif;
-Font-Size: 40px;
+.art {
+  font-family: 'Old Standard TT', Serif;
+  font-size: 40px;
 }
 
-.cartbtn{
-    justify-content: flex-end;
+.cartbtn {
+  justify-content: flex-end;
+}
+
+/* #cartbox{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0;
+} */
+
+#cartbox {
+  background-color: #d69d66;
+
+  color: #fff;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+
+#cartbox {
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+#cartbox:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+
+  right: -20px;
+  transition: 0.5s;
+}
+
+#cartbox:hover {
+  padding-right: 20px;
+  padding-left: 8px;
+  background-color: #3d6d79;
+}
+
+#cartbox:hover:after {
+  opacity: 1;
+  right: 10px;
 }

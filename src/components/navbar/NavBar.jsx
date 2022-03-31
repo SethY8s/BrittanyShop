@@ -29,7 +29,7 @@ export default function NavBar() {
             <Nav.Item>
               {/* cart section */}
 
-              <Button className="me-4">
+              <Button  className="me-4" id={navbarCSS.cartbox}>
                 Cart
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
