@@ -1,27 +1,31 @@
 .art {
   font-family: 'Old Standard TT', Serif;
   font-size: 40px;
+  margin-left: .5em;
 }
 
 .cartbtn {
   justify-content: flex-end;
 }
 
-/* #cartbox{
-    color: black;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 0;
-} */
+.navLink{
+  margin: 0 1em;
+  color: black;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+}
+
+
 
 #cartbox {
   background-color: #d69d66;
-
+  border-radius: 0;
   color: #fff;
   text-align: center;
   transition: all 0.5s;
   cursor: pointer;
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  padding: .5em 1.5em;
 }
 
 #cartbox {

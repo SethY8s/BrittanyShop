@@ -1,21 +1,25 @@
-import { Navbar, Container, Nav, NavDropdown, Button } from 'react-bootstrap';
+import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import navbarCSS from './navbar.module.css';
 
 // import { Link } from 'react-router-dom';
 
 export default function NavBar() {
   return (
-    <Navbar fixed="top" bg="light" expand="md">
+    <Navbar fixed="top" className='py-3' bg="light" expand="md">
       <Container fluid>
         <Navbar.Brand href="#home">
           <span className={navbarCSS.art}>Brittany's Art</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className={navbarCSS.cartbtn}>
-          <Nav className="">
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+          <Nav>
+            <span className='d-flex me-4'>
+            <Nav.Link className={navbarCSS.navLink} href="#">Home</Nav.Link>
+            <Nav.Link className={navbarCSS.navLink} href="#link">Art</Nav.Link>
+            <Nav.Link className={navbarCSS.navLink} href="#link">Contact</Nav.Link>
+            </span>
+            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown"> */}
+              {/* <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
               </NavDropdown.Item>
@@ -24,17 +28,17 @@ export default function NavBar() {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
 
             <Nav.Item>
               {/* cart section */}
 
-              <Button  className="me-4" id={navbarCSS.cartbox}>
-                Cart
+              <Button  className="me-5" id={navbarCSS.cartbox}>
+                
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="20"
+                  height="20"
                   fill="currentColor"
                   viewBox="0 0 16 16"
                 >
