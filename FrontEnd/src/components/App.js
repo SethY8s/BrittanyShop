@@ -7,11 +7,11 @@ function App() {
   return <div className="App">
     
     {/* <NavBar /> */}
-    <Intro />
+    
     <Router>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Intro />} />
+      <Route path="/" element={<Intro />} />
       <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>

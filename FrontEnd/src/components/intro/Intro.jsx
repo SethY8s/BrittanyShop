@@ -5,8 +5,12 @@ import introCSS from './intro.module.css'
 
 export default function Intro() {
   return (
-    <div>
-      <img className={introCSS.buns} src="https://cdn.pixabay.com/photo/2016/11/22/20/02/abstract-1850417_960_720.jpg" alt="hkkj" />
+    <div className={introCSS.box}>
+      
+      <div className={introCSS.text}>
+      <h2 className={introCSS.textBackground}>Welcome to my Gallery</h2>
+      <h4 className={introCSS.textBackground}>Order online or reach out for special orders</h4>
+      </div>
        </div>
   )
 }
