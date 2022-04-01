@@ -9,7 +9,7 @@ export default function Product() {
     <div className={productCSS.hel}>
         <div className='d-flex flex-column align-items-center'>
         <img className={productCSS.productImage} src={image} alt="nlkk" />
-        <h6>Foxxy Lady</h6>
+        <h6>Foxxy Lady ($200)</h6>
         <span>
             <Link to='/product:id'><Button>View</Button></Link>
             <Button>Add to Cart</Button>

@@ -1,9 +1,16 @@
+h3{
+    text-align: center;
+    font-family: 'Old Standard TT', Serif;
+    font-size: 55px;
+    margin-top: 4rem;
+}
+
 .hel{
     height: 25rem;
     width: 20rem;
     border: 3px solid black;
     display: flex;
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 
 .productImage{

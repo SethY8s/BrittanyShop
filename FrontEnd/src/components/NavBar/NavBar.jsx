@@ -7,9 +7,9 @@ export default function NavBar() {
   return (
     <Navbar fixed="top" className="py-3" bg="light" expand="md">
       <Container fluid>
-        <Navbar.Brand href="#home">
-          <span className={navbarCSS.art}>Brittany's Art</span>
-        </Navbar.Brand>
+      <Link style={{ textDecoration: 'none' }} to='/'><Navbar.Brand href="#home">
+         <span className={navbarCSS.art}>Brittany's Art</span>
+        </Navbar.Brand></Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className={navbarCSS.cartbtn}>
           <Nav>
