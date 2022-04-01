@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from "./NavBar/NavBar";
-import Intro from "./intro/Intro";
+import Home from './Home';
 import Cart from './cart/Cart';
 
 function App() {
@@ -11,8 +11,9 @@ function App() {
     <Router>
       <NavBar />
       <Routes>
-      <Route path="/" element={<Intro />} />
+      <Route path="/" element={<Home />} />
       <Route path="/cart" element={<Cart />} />
+      {/* <Route path="/product:id" element={<ViewItem />} /> */}
       </Routes>
     </Router>
     
