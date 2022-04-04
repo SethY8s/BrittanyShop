@@ -82,7 +82,7 @@ export default function ShoppingState(props) {
   };
 
   return (
-    <ShoppingContext.Provider value={{ shopping: state.products, value }}>
+    <ShoppingContext.Provider value={{ shopping: state.products, cart: state.cart, value }}>
       {props.children}
     </ShoppingContext.Provider>
   );

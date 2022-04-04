@@ -8,9 +8,7 @@ import {
 const shoppingReducer = (state, action) => {
   switch (action.type) {
     case ADD_TO_CART:
-      return {
-          
-      };
+      return {};
     case REMOVE_FROM_CART:
       return {};
     case LOAD_CURRENT_ITEM:
