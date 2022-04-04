@@ -1,3 +1,8 @@
-.hello{
-    margin-top: 20rem;
+.viewItemContainer{
+    margin-top: 9rem;
+    display: flex;
+}
+
+.image{
+ width: 35%;
 }
