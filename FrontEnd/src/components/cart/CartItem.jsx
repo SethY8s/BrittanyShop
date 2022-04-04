@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function CartItem() {
+export default function CartItem({item}) {
   return (
-    <div>CartItem</div>
+    <div>{item}</div>
   )
 }

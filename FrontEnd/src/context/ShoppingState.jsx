@@ -1,6 +1,8 @@
 import React, { useReducer } from 'react';
 import ShoppingContext from './shopping-context';
 import shoppingReducer from './shopping-reducer';
+import image from '../images/fox1.jpg'
+// can import images here and manually put them in state
 import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
@@ -18,7 +20,7 @@ export default function ShoppingState(props) {
           "This cube will keep you busy the entire day and it is very fun to play with",
         price: 15.0,
         image:
-          "https://images.unsplash.com/photo-1591991731833-b4807cf7ef94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+          image,
       },
       {
         id: 2,
@@ -75,6 +77,8 @@ export default function ShoppingState(props) {
   };
 
   const value = {
+    shopping: state.products,
+    cart: state.cart,
     addToCart,
     removeFromCart,
     adjustItemQty,
@@ -82,7 +86,7 @@ export default function ShoppingState(props) {
   };
 
   return (
-    <ShoppingContext.Provider value={{ shopping: state.products, cart: state.cart, value }}>
+    <ShoppingContext.Provider value={ value }>
       {props.children}
     </ShoppingContext.Provider>
   );
