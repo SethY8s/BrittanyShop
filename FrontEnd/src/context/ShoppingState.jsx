@@ -42,6 +42,7 @@ export default function ShoppingState(props) {
       },
     ],
     cart: [],
+    currentItem: null,
   };
 
   const [state, dispatch] = useReducer(shoppingReducer, initialState);
@@ -68,21 +69,22 @@ export default function ShoppingState(props) {
   //   });
   // };
 
-  // const loadCurrentItem = (itemID, qty) => {
-  //   dispatch({
-  //     type: LOAD_CURRENT_ITEM,
-  //     payload: itemID,
-  //     qty,
-  //   });
-  // };
+  const loadCurrentItem = (itemID, qty) => {
+    dispatch({
+      type: LOAD_CURRENT_ITEM,
+      payload: itemID,
+      qty,
+    });
+  };
 
   const value = {
     shopping: state.products,
     cart: state.cart,
+    currentItem: state.currentItem,
     addToCart,
     removeFromCart,
     // adjustItemQty,
-    // loadCurrentItem,
+    loadCurrentItem,
   };
 
   return (
