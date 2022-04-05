@@ -6,9 +6,15 @@ import CartItem from './CartItem';
 import ShoppingContext from '../../context/shopping-context';
 
 export default function Cart() {
+  
   const { cart } = useContext(ShoppingContext);
+  console.log(cart)
   return (
     <>
+    <div className={cartCSS.checkoutBox}>
+    {cart.map((item) => (
+          <CartItem key={item.id} itemData={item}/>
+        ))}
       <div className={cartCSS.checkoutContainer}>
         <h4>
           {' '}
@@ -23,9 +29,7 @@ export default function Cart() {
         </span>
         <Button>Proceed to Checkout</Button>
       </div>
-      {cart.map((item) => (
-          <CartItem key={item.id} itemData={item}/>
-        ))}
+        </div>
     </>
   );
 }

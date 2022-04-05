@@ -1,3 +1,20 @@
-.checkoutContainer{
-    margin-top: 5rem;
+.checkoutBox {
+  margin-top: 9rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.checkoutContainer {
+  margin-top: 8rem;
+}
+
+.cartItemContainer {
+  height: 400px;
+  width: 400px;
+  background-color: grey;
+}
+
+.itemImage {
+  height: 200px;
+  width: 200px;
 }
