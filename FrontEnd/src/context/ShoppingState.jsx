@@ -60,29 +60,29 @@ export default function ShoppingState(props) {
     });
   };
 
-  const adjustItemQty = (itemID, qty) => {
-    dispatch({
-      type: ADJUST_QTY,
-      payload: itemID,
-      qty,
-    });
-  };
+  // const adjustItemQty = (itemID, qty) => {
+  //   dispatch({
+  //     type: ADJUST_QTY,
+  //     payload: itemID,
+  //     qty,
+  //   });
+  // };
 
-  const loadCurrentItem = (itemID, qty) => {
-    dispatch({
-      type: LOAD_CURRENT_ITEM,
-      payload: itemID,
-      qty,
-    });
-  };
+  // const loadCurrentItem = (itemID, qty) => {
+  //   dispatch({
+  //     type: LOAD_CURRENT_ITEM,
+  //     payload: itemID,
+  //     qty,
+  //   });
+  // };
 
   const value = {
     shopping: state.products,
     cart: state.cart,
     addToCart,
     removeFromCart,
-    adjustItemQty,
-    loadCurrentItem,
+    // adjustItemQty,
+    // loadCurrentItem,
   };
 
   return (
