@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import ShoppingContext from './shopping-context';
 import shoppingReducer from './shopping-reducer';
 import image from '../images/fox1.jpg'
@@ -41,9 +41,13 @@ export default function ShoppingState(props) {
           "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80",
       },
     ],
-    cart: [],
-    currentItem: null,
+    cart: JSON.parse(localStorage.getItem("cart") || '[]'),
+    currentItem: JSON.parse(localStorage.getItem("currentItem") || '[]'),
   };
+
+  
+
+
 
   const [state, dispatch] = useReducer(shoppingReducer, initialState);
 
@@ -86,6 +90,16 @@ export default function ShoppingState(props) {
     // adjustItemQty,
     loadCurrentItem,
   };
+
+  useEffect(() => {
+    
+    localStorage.setItem("cart", JSON.stringify(state.cart));
+  }, [state.cart])
+
+  useEffect(() => {
+    
+    localStorage.setItem("currentItem", JSON.stringify(state.currentItem));
+  }, [state.currentItem])
 
   return (
     <ShoppingContext.Provider value={ value }>

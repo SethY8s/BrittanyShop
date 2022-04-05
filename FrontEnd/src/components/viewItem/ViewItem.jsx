@@ -15,8 +15,8 @@ export default function ViewItem() {
     <img className={viewCSS.image} src={image} alt="nlkk" />
     <div>
         <h2>{currentItem.title}</h2>
-        <h4>$200 + 20 for shipping</h4>
-        <p>This is a Masala of a fox surrounded by the moon and energy.The Fox represents freedom</p>
+        <h4>${currentItem.price}</h4>
+        <p>{currentItem.description}</p>
         <Link to='/'><Button>Back to Home</Button></Link>
         <Button>Add to Cart</Button>
     </div>
