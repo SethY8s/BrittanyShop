@@ -6,17 +6,19 @@ import ShoppingContext from '../../context/shopping-context';
 
 export default function NavBar() {
   const { cart } = useContext(ShoppingContext);
-  
-  
-  const[cartCount, setCartCount] = useState(0)
 
-  useEffect(()=> {
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
     let count = 0;
-    cart.forEach(item=>{
-      count += item.qty
-    })
+    cart.forEach((item) => {
+      count += item.qty;
+    });
     setCartCount(count);
-  }, [cart, cartCount])
+  }, [cart, cartCount]);
+  // use effect rerenders it twice
+
+  console.log(cart)
 
   return (
     <Navbar fixed="top" className="py-3" bg="light" expand="md">

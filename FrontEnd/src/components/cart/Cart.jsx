@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import cartCSS from './cart.module.css';
-import { Button } from 'react-bootstrap';
 import CartItem from './CartItem';
+import CartAction from './CartAction';
 
 import ShoppingContext from '../../context/shopping-context';
 
@@ -17,12 +17,13 @@ export default function Cart() {
     cart.forEach(item => price = price + item.price)
 
     setTotalPrice(price)
-  }, [cart, setTotalPrice, totalPrice])
+  }, [cart])
+  // [cart, setTotalPrice, totalPrice] was this but delted state to make it render only twice instead of three times
   // adding these dependencies makes it so when you delete an item in cart the component refreshes showing real price
 
   
   
-  console.log(cart)
+  // console.log(cart)
 
 
 
@@ -44,7 +45,7 @@ export default function Cart() {
             <p>{totalPrice}</p>
           </span>
         </span>
-        <Button>Proceed to Checkout</Button>
+        <CartAction />
       </div>
         </div>
     </>
