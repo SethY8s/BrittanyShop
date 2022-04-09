@@ -8,6 +8,7 @@ import {
   REMOVE_FROM_CART,
   // ADJUST_QTY,
   LOAD_CURRENT_ITEM,
+  REMOVE_ALL_FROM_CART,
 } from './shopping-types';
 
 export default function ShoppingState(props) {
@@ -60,6 +61,13 @@ export default function ShoppingState(props) {
     });
   };
 
+  const removeAllFromCart = () => {
+    dispatch({
+      type: REMOVE_ALL_FROM_CART,
+      
+    });
+  };
+
   // const adjustItemQty = (itemID, qty) => {
   //   dispatch({
   //     type: ADJUST_QTY,
@@ -82,6 +90,7 @@ export default function ShoppingState(props) {
     currentItem: state.currentItem,
     addToCart,
     removeFromCart,
+    removeAllFromCart,
     // adjustItemQty,
     loadCurrentItem,
   };

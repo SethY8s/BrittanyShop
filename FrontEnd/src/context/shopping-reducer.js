@@ -2,6 +2,7 @@ import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   LOAD_CURRENT_ITEM,
+  REMOVE_ALL_FROM_CART,
   // ADJUST_QTY,
 } from './shopping-types';
 
@@ -36,6 +37,12 @@ const shoppingReducer = (state, action) => {
       return {
         ...state,
         cart: state.cart.filter((item) => item.id !== action.payload),
+      };
+
+      case REMOVE_ALL_FROM_CART:
+      return {
+        ...state,
+        cart: [],
       };
       
     case LOAD_CURRENT_ITEM:

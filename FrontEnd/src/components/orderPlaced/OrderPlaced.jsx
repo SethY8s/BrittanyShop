@@ -1,15 +1,16 @@
-import React,{ useContext, useEffect, useState} from 'react'
+import React,{ useContext, useEffect, useState } from 'react'
 import shoppingContext from '../../context/shopping-context'
 import orderCSS from './order.module.css'
 // import CartAction from '../cart/CartAction'
 
 export default function OrderPlaced() {
-    const {cart} = useContext(shoppingContext)
+    const { cart, removeAllFromCart } = useContext(shoppingContext)
     const[products, setProducts] = useState()
-    // console.log(cart)
+    console.log(cart)
 
     useEffect(()=>{
         setProducts(cart)
+        removeAllFromCart()
         
     },[])
 
@@ -21,7 +22,8 @@ export default function OrderPlaced() {
     <>
     <div className={orderCSS.orderContainer}>
 
-        hello
+        
+        <button onClick={removeAllFromCart}>button</button>
 
     </div>
     
