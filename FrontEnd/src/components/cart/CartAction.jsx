@@ -1,28 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import shoppingContext from '../../context/shopping-context';
 import axios from 'axios';
 
-const cart = [
-  {
-    id: 1,
-  },
-  {
-    id: 2,
-  },
-  {
-    id: 3,
-  },
-];
+// const cart = [
+//   {
+//     id: 1,
+//   },
+//   {
+//     id: 2,
+//   },
+//   {
+//     id: 3,
+//   },
+// ];
 
 const ProductDisplay = () => {
+  const { cart } = useContext(shoppingContext);
   const [loading, setLoading] = useState(false);
+
+//   const carts = [
+//     {
+//       id: cart[0].id,
+//     },
+//   ];
+
+const carts = cart.map(el =>{
+    return {id: el.id}
+})
+
+  console.log(carts);
 
   async function postCart() {
     setLoading(true);
+
     try {
       const resp = await axios.post(
         'http://localhost:4000/create-checkout-session',
         {
-          cart,
+          carts,
         }
       );
       console.log(resp);
