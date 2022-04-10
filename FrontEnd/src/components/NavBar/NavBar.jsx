@@ -1,14 +1,16 @@
 import { useState, useContext, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import navbarCSS from './navbar.module.css';
 import ShoppingContext from '../../context/shopping-context';
 
 export default function NavBar() {
   const { cart } = useContext(ShoppingContext);
+  const location = useLocation()
 
   const [cartCount, setCartCount] = useState(0);
 
+ 
   useEffect(() => {
     let count = 0;
     cart.forEach((item) => {
@@ -19,6 +21,11 @@ export default function NavBar() {
   // use effect rerenders it twice
 
   console.log(cart)
+
+  if(location.pathname === '/Thankyou') {
+    return null
+  }
+  
 
   return (
     <Navbar fixed="top" className="py-3" bg="light" expand="md">
