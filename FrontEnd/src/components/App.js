@@ -5,15 +5,11 @@ import Cart from './cart/Cart';
 import ViewItem from './viewItem/ViewItem';
 import OrderPlaced from './orderPlaced/OrderPlaced';
 
-
 import ShoppingState from '../context/ShoppingState';
-
 
 function App() {
   return (
     <div className="App">
-      {/* <NavBar /> */}
-
       <Router>
         <ShoppingState>
           <NavBar />
