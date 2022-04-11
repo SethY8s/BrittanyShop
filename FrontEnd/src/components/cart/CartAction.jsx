@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import shoppingContext from '../../context/shopping-context';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 
 // const cart = [
 //   {
@@ -18,6 +19,12 @@ const ProductDisplay = () => {
   const { cart } = useContext(shoppingContext);
   const [loading, setLoading] = useState(false);
 
+
+  toast.success("Need to add items into cart to Checkout", {
+    toastId: 'your-id',
+  });
+
+
   useEffect(() => {
     if(cart.length === 0){
       setLoading(true)
@@ -32,6 +39,8 @@ const ProductDisplay = () => {
   console.log(carts);
 
   async function postCart() {
+
+    
     setLoading(true);
 
     try {
@@ -55,6 +64,7 @@ const ProductDisplay = () => {
       <button disabled={loading} onClick={postCart}>
         CheckOut
       </button>
+      {loading && <ToastContainer />}
     </section>
   );
 };
