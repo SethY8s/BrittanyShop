@@ -18,15 +18,16 @@ const ProductDisplay = () => {
   const { cart } = useContext(shoppingContext);
   const [loading, setLoading] = useState(false);
 
-//   const carts = [
-//     {
-//       id: cart[0].id,
-//     },
-//   ];
+  useEffect(() => {
+    if(cart.length === 0){
+      setLoading(true)
+      
+    }
+  }, [cart]);
 
-const carts = cart.map(el =>{
-    return {id: el.id}
-})
+  const carts = cart.map((el) => {
+    return { id: el.id };
+  });
 
   console.log(carts);
 
@@ -52,7 +53,7 @@ const carts = cart.map(el =>{
   return (
     <section>
       <button disabled={loading} onClick={postCart}>
-        my button
+        CheckOut
       </button>
     </section>
   );

@@ -4,6 +4,7 @@ import Home from './Home';
 import Cart from './cart/Cart';
 import ViewItem from './viewItem/ViewItem';
 import OrderPlaced from './orderPlaced/OrderPlaced';
+import 'react-toastify/dist/ReactToastify.css';
 
 import ShoppingState from '../context/ShoppingState';
 
