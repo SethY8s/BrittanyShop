@@ -21,15 +21,16 @@ export default function Product({ productData }) {
           <h6>
             {productData.title}(${productData.price})
           </h6>
-          <span>
+          <p>{productData.description}</p>
+          
             <Link to={`/product:${productData.id}`}>
-              <button onClick={() => loadCurrentItem(productData)}>View</button>
+              <button onClick={() => loadCurrentItem(productData)} className={productCSS.btn}>View Item</button>
             </Link>
 
-            <button onClick={() => addToCart(productData.id)}>
+            <button className={productCSS.btn} onClick={() => addToCart(productData.id)}>
               Add to Cart
             </button>
-          </span>
+          
         </div>
       </div>
     

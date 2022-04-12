@@ -23,7 +23,7 @@ export default function ShoppingState(props) {
       {
         id: 1,
         title: 'Mama Bear and Cubs',
-        description: 'Get a big cup of coffee every morning before the day starts',
+        description: '24"x12" inch, Acrylic Painting,  on Canvas.',
         price: 420.0,
         image: bear,
       },
@@ -31,7 +31,7 @@ export default function ShoppingState(props) {
         id: 2,
         title: 'Still Pond and Pine',
         description:
-          'Get a big cup of coffee every morning before the day starts',
+          '14"x14" inch, Oil Painting, on Canvas.',
         price: 220.0,
         image:
           stillPond,
@@ -40,7 +40,7 @@ export default function ShoppingState(props) {
         id: 3,
         title: 'Fox in Woods',
         description:
-          'These books will keep you busy all throughout the entire lockdown and give you some great advise from famous people',
+          '18"x14" inch, Oil Painting, on Canvas.',
         price: 280.0,
         image:
           foxInWoods,
@@ -49,7 +49,7 @@ export default function ShoppingState(props) {
         id: 4,
         title: 'Autumn at Glacial',
         description:
-          'This cube will keep you busy the entire day and it is very fun to play with',
+          '20"x16" inch, Oil Painting, on Canvas.',
         price: 295.0,
         image: autumn,
       },
@@ -57,7 +57,7 @@ export default function ShoppingState(props) {
         id: 5,
         title: 'Fox Mandala',
         description:
-          'This cube will keep you busy the entire day and it is very fun to play with',
+          '10"x10" inch, Acrylic Painting, on Canvas.',
         price: 120.0,
         image: foxMandala,
       },
@@ -65,7 +65,7 @@ export default function ShoppingState(props) {
         id: 6,
         title: 'YellowStone Falls',
         description:
-          'This cube will keep you busy the entire day and it is very fun to play with',
+          '16"x20" inch, Oil Painting, on Canvas',
         price: 496.0,
         image: yellowStone,
       },
