@@ -15,10 +15,10 @@ export default function Product({ productData }) {
             <img
               className={productCSS.productImage}
               src={productData.image}
-              alt="nlkk"
+              alt="Paintings"
             />
           </div>
-          <h6>
+          <h6 className={productCSS.productTitle}>
             {productData.title}(${productData.price})
           </h6>
           <p>{productData.description}</p>

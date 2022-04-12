@@ -1,8 +1,22 @@
-.viewItemContainer{
-    margin-top: 9rem;
+
+
+
+.viewItemContainer {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+  
 }
 
-.image{
- width: 35%;
+.image {
+  width: 700px;
+  border: 2px solid black;
 }
+
+/* .viewText {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+} */

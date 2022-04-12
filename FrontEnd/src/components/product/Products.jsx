@@ -11,7 +11,7 @@ export default function Products() {
   const {shopping} = useContext(ShoppingContext)
 
   return (
-    <div>
+    <div id="art">
       <h3 className={productCSS.buyDirectly}>Buy Directly</h3>
       <div className={productCSS.parentContainer}>
      {shopping.map(product => (

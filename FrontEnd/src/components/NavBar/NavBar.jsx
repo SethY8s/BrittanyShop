@@ -40,9 +40,9 @@ export default function NavBar() {
           <Nav>
             <span className="d-flex me-4">
               <Nav.Link className={navbarCSS.navLink} href="#">
-                Home
+                About me
               </Nav.Link>
-              <Nav.Link className={navbarCSS.navLink} href="#link">
+              <Nav.Link className={navbarCSS.navLink} href="#art">
                 Art
               </Nav.Link>
               <Nav.Link className={navbarCSS.navLink} href="#link">
