@@ -1,7 +1,13 @@
 import React, { useReducer, useEffect } from 'react';
 import ShoppingContext from './shopping-context';
 import shoppingReducer from './shopping-reducer';
-import image from '../images/foxMandala.jpg';
+import bear from '../images/bear.jpg'
+import stillPond from '../images/stillPond.jpg'
+import foxInWoods from '../images/foxInWoods.jpg'
+import autumn from '../images/autumnAtGlacial.jpg'
+import foxMandala from '../images/foxMandala.jpg';
+import yellowStone from '../images/yellowStoneFalls.jpg'
+
 // can import images here and manually put them in state
 import {
   ADD_TO_CART,
@@ -16,52 +22,52 @@ export default function ShoppingState(props) {
     products: [
       {
         id: 1,
-        title: 'Rubix Cube',
+        title: 'Mama Bear and Cubs',
         description: 'Get a big cup of coffee every morning before the day starts',
-        price: 15.0,
-        image: image,
+        price: 420.0,
+        image: bear,
       },
       {
         id: 2,
-        title: 'Large Coffee Cup',
+        title: 'Still Pond and Pine',
         description:
           'Get a big cup of coffee every morning before the day starts',
-        price: 20.0,
+        price: 220.0,
         image:
-          'https://images.unsplash.com/photo-1572119865084-43c285814d63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+          stillPond,
       },
       {
         id: 3,
-        title: '10 Books',
+        title: 'Fox in Woods',
         description:
           'These books will keep you busy all throughout the entire lockdown and give you some great advise from famous people',
-        price: 150.0,
+        price: 280.0,
         image:
-          'https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80',
+          foxInWoods,
       },
       {
         id: 4,
-        title: 'Rubix ',
+        title: 'Autumn at Glacial',
         description:
           'This cube will keep you busy the entire day and it is very fun to play with',
-        price: 15.0,
-        image: image,
+        price: 295.0,
+        image: autumn,
       },
       {
         id: 5,
-        title: ' Cube',
+        title: 'Fox Mandala',
         description:
           'This cube will keep you busy the entire day and it is very fun to play with',
-        price: 15.0,
-        image: image,
+        price: 120.0,
+        image: foxMandala,
       },
       {
         id: 6,
-        title: 'something',
+        title: 'YellowStone Falls',
         description:
           'This cube will keep you busy the entire day and it is very fun to play with',
-        price: 15.0,
-        image: image,
+        price: 496.0,
+        image: yellowStone,
       },
     ],
     cart: JSON.parse(localStorage.getItem('cart') || '[]'),
