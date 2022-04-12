@@ -13,7 +13,7 @@ export default function Products() {
   return (
     <div>
       <h3 className={productCSS.buyDirectly}>Buy Directly</h3>
-      <div className='d-flex justify-content-around'>
+      <div className={productCSS.parentContainer}>
      {shopping.map(product => (
        <Product key={product.id} productData={product}/>
      ))}

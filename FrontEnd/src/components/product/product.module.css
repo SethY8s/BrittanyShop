@@ -1,3 +1,12 @@
+.parentContainer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
 .buyDirectly{
     text-align: center;
     font-family: 'Old Standard TT', Serif;
@@ -8,17 +17,31 @@
 
 .productContainer{
     height: 25rem;
-    width: 20rem;
-    border: 3px solid black;
+    width: 25%;
+    /* border: 2px solid black; */
     display: flex;
-    margin-top: 8rem;
+    flex-wrap: wrap;
+    
+    margin: 8rem 2rem;
     transition: all .2s ease-in-out; 
+    
 }
+
 
 .productContainer:hover {
     transform: scale(1.1);
 }
 
+.imagebox{
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    background-color: #3d6d79;
+    padding: 30px 0;
+    justify-items: center;
+}
+
 .productImage{
     width: 80%;
+    border: 1px solid black;
 }
