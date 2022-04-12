@@ -4,9 +4,7 @@ import Products from './product/Products';
 import { ToastContainer, toast } from 'react-toastify';
 
 export default function Home() {
-  toast.success("Oh wait there's more ;)", {
-    toastId: 'your-id',
-  });
+  
 
   const [message, setMessage] = useState();
 
@@ -16,6 +14,11 @@ export default function Home() {
 
     if (query.get('canceled')) {
       setMessage(true);
+
+      toast.success("Oh wait there's more ;)", {
+        toastId: '1',
+      });
+      // addeed toast in useEffect so it didn't render in cart on refresh
     }
   }, [message]);
 

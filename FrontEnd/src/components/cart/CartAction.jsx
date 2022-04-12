@@ -20,8 +20,8 @@ const ProductDisplay = () => {
   const [loading, setLoading] = useState(false);
 
 
-  toast.success("Need to add items into cart to Checkout", {
-    toastId: 'your-id',
+  toast.success("Add items to checkout", {
+    toastId: '2',
   });
 
 
@@ -64,7 +64,7 @@ const ProductDisplay = () => {
       <button disabled={loading} onClick={postCart}>
         CheckOut
       </button>
-      {loading && <ToastContainer />}
+      {cart.length === 0 && <ToastContainer />}
     </section>
   );
 };
