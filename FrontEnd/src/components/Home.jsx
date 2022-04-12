@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Intro from './intro/Intro';
 import Products from './product/Products';
 import { ToastContainer, toast } from 'react-toastify';
+import Footer from './footer/Footer';
 
 export default function Home() {
   
@@ -15,8 +16,10 @@ export default function Home() {
     if (query.get('canceled')) {
       setMessage(true);
 
-      toast.success("Oh wait there's more ;)", {
+      toast.success(" 🦄 Oh wait there's more ;)", {
         toastId: '1',
+        autoClose: 2500,
+        pauseOnHover: false,
       });
       // addeed toast in useEffect so it didn't render in cart on refresh
     }
@@ -24,9 +27,10 @@ export default function Home() {
 
   return (
     <>
+      {message && <ToastContainer position="top-center" />}
       <Intro />
       <Products />
-      {message && <ToastContainer />}
+      <Footer />
     </>
   );
 }

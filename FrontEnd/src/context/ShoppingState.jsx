@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect } from 'react';
 import ShoppingContext from './shopping-context';
 import shoppingReducer from './shopping-reducer';
-import image from '../images/fox1.jpg';
+import image from '../images/foxMandala.jpg';
 // can import images here and manually put them in state
 import {
   ADD_TO_CART,
@@ -39,6 +39,30 @@ export default function ShoppingState(props) {
         price: 150.0,
         image:
           'https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80',
+      },
+      {
+        id: 4,
+        title: 'Rubix ',
+        description:
+          'This cube will keep you busy the entire day and it is very fun to play with',
+        price: 15.0,
+        image: image,
+      },
+      {
+        id: 5,
+        title: ' Cube',
+        description:
+          'This cube will keep you busy the entire day and it is very fun to play with',
+        price: 15.0,
+        image: image,
+      },
+      {
+        id: 6,
+        title: 'something',
+        description:
+          'This cube will keep you busy the entire day and it is very fun to play with',
+        price: 15.0,
+        image: image,
       },
     ],
     cart: JSON.parse(localStorage.getItem('cart') || '[]'),

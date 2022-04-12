@@ -15,9 +15,12 @@ const PORT = process.env.PORT || 4000;
 // const YOUR_DOMAIN = 'http://localhost:4242';
 
 const storeItems = new Map([
-  [1, { price: 'price_1KlgZSEjQbs32fBJL8KRfVpV', quantity: 1 }],
-  [2, { price: 'price_1KlyGlEjQbs32fBJsaFn4dky', quantity: 1 }],
-  [3, { price: 'price_1KlyHkEjQbs32fBJuiDDg6Os', quantity: 1 }],
+  [1, { price: 'price_1KnhrqEjQbs32fBJCfu2LmC9', quantity: 1 }],
+  [2, { price: 'price_1KnhxoEjQbs32fBJdPIYcM8J', quantity: 1 }],
+  [3, { price: 'price_1Kni0aEjQbs32fBJmTi4w0Hv', quantity: 1 }],
+  [4, { price: 'price_1Kni45EjQbs32fBJfDTYI2UK', quantity: 1 }],
+  [5, { price: 'price_1Kni5BEjQbs32fBJRfcPtC1H', quantity: 1 }],
+  [6, { price: 'price_1Kni6KEjQbs32fBJJOPXNdcD', quantity: 1 }],
 ]);
 
 app.post('/create-checkout-session', async (req, res) => {

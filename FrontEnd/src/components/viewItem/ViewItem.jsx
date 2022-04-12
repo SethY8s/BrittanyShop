@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import viewCSS from './viewItem.module.css'
-import image from '../../images/fox1.jpg'
+import image from '../../images/foxMandala.jpg'
 import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 

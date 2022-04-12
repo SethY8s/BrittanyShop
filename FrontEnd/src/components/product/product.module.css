@@ -6,12 +6,17 @@
 }
 
 
-.hel{
+.productContainer{
     height: 25rem;
     width: 20rem;
     border: 3px solid black;
     display: flex;
     margin-top: 8rem;
+    transition: all .2s ease-in-out; 
+}
+
+.productContainer:hover {
+    transform: scale(1.1);
 }
 
 .productImage{

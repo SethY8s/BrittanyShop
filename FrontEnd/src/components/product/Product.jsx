@@ -12,7 +12,7 @@ export default function Product({ productData }) {
 
   const {addToCart, loadCurrentItem} = useContext(ShoppingContext) 
   return (
-    <div className={productCSS.hel}>
+    <div className={productCSS.productContainer}>
         <div className='d-flex flex-column align-items-center'>
         <img className={productCSS.productImage} src={productData.image} alt="nlkk" />
         <h6>{productData.title}(${productData.price})</h6>

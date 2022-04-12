@@ -20,7 +20,7 @@ const ProductDisplay = () => {
   const [loading, setLoading] = useState(false);
 
 
-  toast.success("Add items to checkout", {
+  toast.info("Add items to checkout", {
     toastId: '2',
   });
 
