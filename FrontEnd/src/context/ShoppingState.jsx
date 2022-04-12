@@ -17,8 +17,7 @@ export default function ShoppingState(props) {
       {
         id: 1,
         title: 'Rubix Cube',
-        description:
-          'This cube will keep you busy the entire day and it is very fun to play with',
+        description: 'Get a big cup of coffee every morning before the day starts',
         price: 15.0,
         image: image,
       },
@@ -88,7 +87,6 @@ export default function ShoppingState(props) {
   const removeAllFromCart = () => {
     dispatch({
       type: REMOVE_ALL_FROM_CART,
-      
     });
   };
 
