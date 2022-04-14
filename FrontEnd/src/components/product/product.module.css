@@ -14,12 +14,12 @@
 
 .productContainer {
   /* height: 25rem; */
-  width: 25rem;
+  width: 26rem;
   border: 2px solid black;
   border-radius: 3px;
   display: flex;
   flex-wrap: wrap;
-  margin: 8rem 2.5rem;
+  margin: 8rem 4rem;
   transition: all 0.2s ease-in-out;
 }
 

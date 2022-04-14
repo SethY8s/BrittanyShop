@@ -28,7 +28,7 @@ export default function NavBar() {
   
 
   return (
-    <Navbar fixed="top" className="py-3" bg="light" expand="md">
+    <Navbar fixed="top" className="py-3" bg="light" expand="lg">
       <Container fluid>
         <Link style={{ textDecoration: 'none' }} to="/">
           <Navbar.Brand href="#home">
