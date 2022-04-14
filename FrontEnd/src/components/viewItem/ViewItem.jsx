@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import viewCSS from './viewItem.module.css';
-import { Button } from 'react-bootstrap';
+
 import { Link } from 'react-router-dom';
 
 import shoppingContext from '../../context/shopping-context';
@@ -104,13 +104,13 @@ export default function ViewItem() {
         <div className={viewCSS.viewText}>
           <h2>{currentItem.title}</h2>
           {descriptionChecker()}
-          <span>
+          <span className='d-flex justify-content-center m-3'>
             <Link to="/">
-              <Button>Home</Button>
+              <button className={viewCSS.btn}>Home</button>
             </Link>
-            <Button onClick={() => addToCart(currentItem.id)}>
+            <button className={viewCSS.btn} onClick={() => addToCart(currentItem.id)}>
               Add to Cart
-            </Button>
+            </button>
           </span>
         </div>
       </div>

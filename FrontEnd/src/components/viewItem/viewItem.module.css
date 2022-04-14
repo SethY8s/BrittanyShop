@@ -32,3 +32,17 @@ padding: 8rem 0 2rem;
 .viewText {
   width: 50%;
 }
+
+.btn{
+  font-size: 18px;
+  background-color: #d69d66;
+  color: white;
+  text-shadow: 1px 1px grey;
+  width: 125px;
+ margin: 2px 6px;
+ padding: 10px;
+ transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+  background-color: #3d6d79;
+}
