@@ -2,52 +2,57 @@ import React, { useContext, useState, useEffect } from 'react';
 import cartCSS from './cart.module.css';
 import CartItem from './CartItem';
 import CartAction from './CartAction';
+// import Footer from '../footer/Footer';
 
 import ShoppingContext from '../../context/shopping-context';
 
 export default function Cart() {
-  const[totalPrice, setTotalPrice] = useState(0)
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const { cart } = useContext(ShoppingContext);
 
-
-  useEffect(()=>{
+  useEffect(() => {
     let price = 0;
 
-    cart.forEach(item => price = price + item.price)
+    cart.forEach((item) => (price = price + item.price));
 
-    setTotalPrice(price)
-  }, [cart])
+    setTotalPrice(price);
+  }, [cart]);
   // [cart, setTotalPrice, totalPrice] was this but delted state to make it render only twice instead of three times
   // adding these dependencies makes it so when you delete an item in cart the component refreshes showing real price
 
-  
-  
   // console.log(cart)
-
-
 
   return (
     <>
-    <div className={cartCSS.checkoutBox}>
-    {cart.map((item) => (
-          <CartItem key={item.id} itemData={item}/>
-        ))}
-      <div className={cartCSS.checkoutContainer}>
-        <h4>
-          {' '}
-          <b>Cart Summary</b>
-        </h4>
+      <div className={cartCSS.checkoutBox}>
+        <div className={cartCSS.checkoutContainer}>
+          <h4>
+            <b>Cart Summary</b>
+          </h4>
 
-        <span>
-          Total: ()items{' '}
-          <span className="m-3">
-            <p>{totalPrice}</p>
+          <span>
+            Total: ()items{cart.length}
+            <span className="m-3">
+              <p>${totalPrice}</p>
+            </span>
           </span>
-        </span>
-        <CartAction />
-      </div>
+          <CartAction />
         </div>
+        {/* items */}
+        <div className={cartCSS.EditCart}>
+          <h4>Edit Cart</h4>
+        <span className={cartCSS.priceRemove}>
+          <p className='m-0'>Edit Cart Beofore CheckOut</p>
+          <p className='m-0'>price</p>
+          <p className='m-0'>Remove</p>
+          </span>
+          {cart.map((item) => (
+            <CartItem key={item.id} itemData={item} />
+          ))}
+        </div>
+      </div>
+      {/* <Footer /> */}
     </>
   );
 }
