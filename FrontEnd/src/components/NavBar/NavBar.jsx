@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+
 import navbarCSS from './navbar.module.css';
 import ShoppingContext from '../../context/shopping-context';
 
@@ -38,10 +39,10 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className={navbarCSS.cartbtn}>
           <Nav>
-            <span className="d-flex me-4">
-              <Nav.Link className={navbarCSS.navLink} href="#">
+            <span className="d-flex flex-column flex-lg-row me-4 align-items-lg-center">
+              <Link style={{ textDecoration: 'none' }} to="/AboutMe">  <Nav.Item className={navbarCSS.navLink} >
                 About me
-              </Nav.Link>
+              </Nav.Item></Link>
               <Nav.Link className={navbarCSS.navLink} href="#art">
                 Art
               </Nav.Link>

@@ -4,6 +4,7 @@ import Home from './Home';
 import Cart from './cart/Cart';
 import ViewItem from './viewItem/ViewItem';
 import OrderPlaced from './orderPlaced/OrderPlaced';
+import AboutMe from './aboutMe/AboutMe';
 import 'react-toastify/dist/ReactToastify.css';
 
 import ShoppingState from '../context/ShoppingState';
@@ -19,6 +20,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/product:id" element={<ViewItem />} />
             <Route path="/Thankyou" element={<OrderPlaced />} />
+            <Route path="/AboutMe" element={<AboutMe />} />
           </Routes>
         </ShoppingState>
       </Router>
