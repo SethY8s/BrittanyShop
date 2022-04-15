@@ -1,0 +1,23 @@
+.aboutContainer{
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+
+}
+
+
+
+.myImage{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 8px solid rgb(231, 83, 83);
+    margin-right: 2rem;
+}
+
+.text{
+    width: 30rem;
+    margin-left: 2rem;
+}
