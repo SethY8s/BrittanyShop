@@ -12,7 +12,7 @@ export default function Products() {
 
   return (
     <div id="art">
-      <h3 className={productCSS.buyDirectly}>Buy Directly</h3>
+      <h3 className={productCSS.buyDirectly}>Buy Online</h3>
       <div className={productCSS.parentContainer}>
      {shopping.map(product => (
        <Product key={product.id} productData={product}/>

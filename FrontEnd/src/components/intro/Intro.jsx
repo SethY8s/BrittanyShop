@@ -9,7 +9,7 @@ export default function Intro() {
       
       <div className={introCSS.text}>
       <h2 className={introCSS.textBackground}>Welcome to my Gallery</h2>
-      <h4 className={introCSS.textBackgroundsm}>Order online or reach out for special orders</h4>
+      {/* <h4 className={introCSS.textBackgroundsm}>Order online or reach out for special orders</h4> */}
       </div>
        </div>
   )
