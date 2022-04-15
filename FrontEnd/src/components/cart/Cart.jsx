@@ -31,20 +31,21 @@ export default function Cart() {
             <b>Cart Summary</b>
           </h4>
 
-          
-            {cart.map((el) => (
-              <div className={cartCSS.itemsinCheckoutCart}>
-                <p className="">{el.title}</p>
-                <p className="">
-                  $<b>{el.price}</b>
-                </p>
-              </div>
-            ))}
-          
-          <div className='ms-3 mt-3'>
-            <p>
-              <b>({cart.length} items) Total Price: <span className='ms-5'>${totalPrice}</span></b>
-            </p>
+          {cart.map((el) => (
+            <div className={cartCSS.itemsinCheckoutCart}>
+              <p>{el.title}</p>
+
+              <p>
+                <b>${el.price}</b>
+              </p>
+            </div>
+          ))}
+
+          <div className={cartCSS.cartActionAndPrice}>
+            <div className=" w-100 d-flex justify-content-between mb-2">
+              <p><b>({cart.length} items) Total Price:</b></p>
+              <p><b>${totalPrice}</b></p>
+            </div>
             <CartAction />
           </div>
         </div>

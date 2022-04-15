@@ -7,7 +7,7 @@ export default function Footer() {
     <>
     <div id='contact' className={footerCSS.footerContainer}>
       <h3 className={footerCSS.title}>Contact Information</h3>
-      <span className="d-flex justify-content-center w-50">
+      <span className="d-flex justify-content-center w-75">
         {/* <img className={footerCSS.image} src={image} alt="Me" /> */}
         <div>
          
