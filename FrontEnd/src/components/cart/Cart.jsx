@@ -32,9 +32,14 @@ export default function Cart() {
           </h4>
 
           <span>
-            Total: ()items{cart.length}
+            
+            {cart.map((el)=> <div className={cartCSS.itemsinCheckoutCart}><p className='m-1'>{el.title}</p><p className='m-1'>$<b>{el.price}</b></p></div>
+            )}
+           
+
+            (<b>{cart.length}</b>) items
             <span className="m-3">
-              <p>${totalPrice}</p>
+              <p>Total Price: <b>${totalPrice}</b></p>
             </span>
           </span>
           <CartAction />
@@ -44,8 +49,8 @@ export default function Cart() {
           <h4>Edit Cart</h4>
         <span className={cartCSS.priceRemove}>
           <p className='m-0'>Edit Cart Beofore CheckOut</p>
-          <p className='m-0'>price</p>
-          <p className='m-0'>Remove</p>
+          <p className={cartCSS.priceAdjustment}>price ($USD)</p>
+          <p className='m-0 me-3'>Remove</p>
           </span>
           {cart.map((item) => (
             <CartItem key={item.id} itemData={item} />

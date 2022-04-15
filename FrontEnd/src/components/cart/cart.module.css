@@ -1,20 +1,21 @@
 /* Cart */
 
 .checkoutBox {
-  margin-top: 6rem;
+  margin-top: 7rem;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
 }
 
 .checkoutContainer {
-  margin-top: 5rem;
+  
   height: 300px;
   width: 250px;
   /* background-color: #e6e6e6; */
-  margin: 3rem;
-  border-top: 3px solid #d69d66;
-  border-left: 3px solid #d69d66;
+  margin: 3.8rem 3rem;
+  /* border-top: 3px solid #d69d66;
+  border-left: 3px solid #d69d66; */
+  border: 2px solid black;
 }
 
 .priceRemove {
@@ -26,6 +27,15 @@
   display: flex;
   flex-direction: column;
   width:55%;
+}
+.priceAdjustment{
+  margin: 0;
+  margin-left: 5.4rem;
+}
+.itemsinCheckoutCart{
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 /* Cart */
 /* CartItem */
@@ -51,13 +61,22 @@
   font-size: 12px;
 }
 .nameDesc {
-  width: 35%;
+  width: 19rem;
 }
 .removeItem {
-  margin-right: 1.25rem;
+  margin-right: 2rem;
+}
+.removeItem:hover{
+  cursor: pointer;
 }
 .imageText{
   display: flex;
-  width: 47%;
+  width: 20rem;
 }
 /* CartItem */
+/* Cart Action */
+.Checkoutbtn{
+  width: 100%;
+  background-color: #d69d66;
+}
+/* Cart Action */

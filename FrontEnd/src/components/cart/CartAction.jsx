@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import shoppingContext from '../../context/shopping-context';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
-
+import cartCSS from './cart.module.css'
 // const cart = [
 //   {
 //     id: 1,
@@ -61,7 +61,7 @@ const ProductDisplay = () => {
 
   return (
     <section>
-      <button disabled={loading} onClick={postCart}>
+      <button className={cartCSS.Checkoutbtn} disabled={loading} onClick={postCart}>
         CheckOut
       </button>
       {cart.length === 0 && <ToastContainer />}
