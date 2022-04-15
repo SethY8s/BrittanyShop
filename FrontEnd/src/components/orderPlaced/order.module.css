@@ -63,4 +63,15 @@
     right: 10px;
   }
 
+  @media only screen and (max-width: 304px) {
+    .orderImg{
+      width: 93%;
+      border-radius: 50%;
+  }
+  .Thankyou{
+    font-size: 32px;
+    text-align: center;
+  }
+  }
+
 

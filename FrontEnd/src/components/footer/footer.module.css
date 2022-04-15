@@ -22,7 +22,12 @@
     margin-bottom: 5px;
 }
 
-/* .image{
-    height: 130px;
-    border: 3px solid #3d6d79;
-} */
+@media only screen and (max-width: 725px) {
+    .icons{
+        margin: 2px;
+    }
+    .footerContainer{
+        padding-bottom: .5rem;
+    }
+  }
+
