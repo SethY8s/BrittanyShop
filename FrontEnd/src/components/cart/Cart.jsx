@@ -26,6 +26,8 @@ export default function Cart() {
   return (
     <>
       <div className={cartCSS.checkoutBox}>
+        {/* div below is for text under cart summary */}
+        <div>
         <div className={cartCSS.checkoutContainer}>
           <h4 className={cartCSS.cartSummaryText}>
             <b>Cart Summary</b>
@@ -48,6 +50,8 @@ export default function Cart() {
             </div>
             <CartAction />
           </div>
+        </div>
+        <p className={cartCSS.stripeText}>CheckOut is Through Stripe Payment</p>
         </div>
         {/* items */}
         <div className={cartCSS.EditCart}>
