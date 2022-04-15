@@ -10,7 +10,8 @@ export default function Product({ productData }) {
   return (
     
       <div className={productCSS.productContainer}>
-        <div className="d-flex flex-column align-items-center">
+        {/* <div className="d-flex flex-column align-items-center"> */}
+        <div className={productCSS.actualproductContainer}> 
           <div className={productCSS.imagebox}>
             <img
               className={productCSS.productImage}

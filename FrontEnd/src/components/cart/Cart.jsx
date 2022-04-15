@@ -27,30 +27,34 @@ export default function Cart() {
     <>
       <div className={cartCSS.checkoutBox}>
         <div className={cartCSS.checkoutContainer}>
-          <h4>
+          <h4 className={cartCSS.cartSummaryText}>
             <b>Cart Summary</b>
           </h4>
 
-          <span>
-            
-            {cart.map((el)=> <div className={cartCSS.itemsinCheckoutCart}><p className='m-1'>{el.title}</p><p className='m-1'>$<b>{el.price}</b></p></div>
-            )}
-           
-
-            (<b>{cart.length}</b>) items
-            <span className="m-3">
-              <p>Total Price: <b>${totalPrice}</b></p>
-            </span>
-          </span>
-          <CartAction />
+          
+            {cart.map((el) => (
+              <div className={cartCSS.itemsinCheckoutCart}>
+                <p className="">{el.title}</p>
+                <p className="">
+                  $<b>{el.price}</b>
+                </p>
+              </div>
+            ))}
+          
+          <div className='ms-3 mt-3'>
+            <p>
+              <b>({cart.length} items) Total Price: <span className='ms-5'>${totalPrice}</span></b>
+            </p>
+            <CartAction />
+          </div>
         </div>
         {/* items */}
         <div className={cartCSS.EditCart}>
           <h4>Edit Cart</h4>
-        <span className={cartCSS.priceRemove}>
-          <p className='m-0'>Edit Cart Beofore CheckOut</p>
-          <p className={cartCSS.priceAdjustment}>price ($USD)</p>
-          <p className='m-0 me-3'>Remove</p>
+          <span className={cartCSS.priceRemove}>
+            <p className="m-0">Edit Cart Beofore CheckOut</p>
+            <p className={cartCSS.priceAdjustment}>price ($USD)</p>
+            <p className="m-0 me-3">Remove</p>
           </span>
           {cart.map((item) => (
             <CartItem key={item.id} itemData={item} />
