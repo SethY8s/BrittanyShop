@@ -27,7 +27,7 @@ export default function Cart() {
     <>
       <div className={cartCSS.checkoutBox}>
         {/* div below is for text under cart summary */}
-        <div>
+        <div className={cartCSS.textUnderCart}>
         <div className={cartCSS.checkoutContainer}>
           <h4 className={cartCSS.cartSummaryText}>
             <b>Cart Summary</b>

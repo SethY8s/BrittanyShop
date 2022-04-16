@@ -20,7 +20,7 @@ export default function CartItem({ itemData }) {
         <p className={cartItemCSS.description}>{itemData.description}</p>
         </div>
         </div>
-        <p className='me-5'>${itemData.price}</p>
+        <p className={cartItemCSS.priceInItem}>${itemData.price}</p>
 
         
        <p className={cartItemCSS.removeItem}><svg 
