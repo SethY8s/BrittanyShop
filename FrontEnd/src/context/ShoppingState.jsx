@@ -12,7 +12,6 @@ import yellowStone from '../images/yellowStoneFalls.jpg'
 import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
-  // ADJUST_QTY,
   LOAD_CURRENT_ITEM,
   REMOVE_ALL_FROM_CART,
 } from './shopping-types';
@@ -24,6 +23,7 @@ export default function ShoppingState(props) {
         id: 1,
         title: 'Mama Bear and Cubs',
         description: '24"x12" inch, Acrylic Painting,  on Canvas.',
+        descriptionLong: '<h2>hello</h2>',
         price: 420.0,
         image: bear,
       },
@@ -71,7 +71,7 @@ export default function ShoppingState(props) {
       },
     ],
     cart: JSON.parse(localStorage.getItem('cart') || '[]'),
-    currentItem: JSON.parse(localStorage.getItem('currentItem') || '[]'),
+    currentItem: JSON.parse(localStorage.getItem('currentItem') || '{}'),
   };
 
   const [state, dispatch] = useReducer(shoppingReducer, initialState);
@@ -96,13 +96,6 @@ export default function ShoppingState(props) {
     });
   };
 
-  // const adjustItemQty = (itemID, qty) => {
-  //   dispatch({
-  //     type: ADJUST_QTY,
-  //     payload: itemID,
-  //     qty,
-  //   });
-  // };
 
   const loadCurrentItem = (itemID, qty) => {
     dispatch({

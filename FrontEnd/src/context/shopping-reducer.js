@@ -51,12 +51,7 @@ const shoppingReducer = (state, action) => {
         currentItem: action.payload,
       };
 
-      
-    // case ADJUST_QTY:
-    //   return {
-    //     ...state,
-    //     currentItem: action.payload,
-    //   };
+
     default:
       return state;
   }

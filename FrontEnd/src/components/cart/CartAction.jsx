@@ -2,33 +2,19 @@ import React, { useState, useEffect, useContext } from 'react';
 import shoppingContext from '../../context/shopping-context';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
-import cartCSS from './cart.module.css'
-// const cart = [
-//   {
-//     id: 1,
-//   },
-//   {
-//     id: 2,
-//   },
-//   {
-//     id: 3,
-//   },
-// ];
+import cartCSS from './cart.module.css';
 
 const ProductDisplay = () => {
   const { cart } = useContext(shoppingContext);
   const [loading, setLoading] = useState(false);
 
-
-  toast.info("Add items to checkout", {
+  toast.info('Add items to checkout', {
     toastId: '2',
   });
 
-
   useEffect(() => {
-    if(cart.length === 0){
-      setLoading(true)
-      
+    if (cart.length === 0) {
+      setLoading(true);
     }
   }, [cart]);
 
@@ -39,8 +25,6 @@ const ProductDisplay = () => {
   console.log(carts);
 
   async function postCart() {
-
-    
     setLoading(true);
 
     try {
@@ -61,7 +45,11 @@ const ProductDisplay = () => {
 
   return (
     <section>
-      <button className={cartCSS.Checkoutbtn} disabled={loading} onClick={postCart}>
+      <button
+        className={cartCSS.Checkoutbtn}
+        disabled={loading}
+        onClick={postCart}
+      >
         CheckOut
       </button>
       {cart.length === 0 && <ToastContainer />}
