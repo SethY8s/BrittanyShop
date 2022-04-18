@@ -58,8 +58,8 @@ export default function Cart() {
           <h4>Edit Cart</h4>
           <span className={cartCSS.priceRemove}>
             <p className="m-0">Edit Cart Beofore CheckOut</p>
-            <p className={cartCSS.priceAdjustment}>Price ($USD)</p>
-            <p className="m-0 me-3">Remove</p>
+            <p className={cartCSS.priceAdjustment}>Price($)</p>
+            <p className={`m-0 me-3 ${cartCSS.removeText}`}>Remove</p>
           </span>
           {cart.map((item) => (
             <CartItem key={item.id} itemData={item} />
