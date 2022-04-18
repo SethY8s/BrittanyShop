@@ -43,7 +43,7 @@
 }
 .priceAdjustment {
   margin: 0;
-  margin-left: 5.4rem;
+  margin-left: 6rem;
 }
 .itemsinCheckoutCart {
   display: flex;
@@ -124,13 +124,15 @@
 
 
 /* media queries */
-@media only screen and (max-width: 1175px) {
+@media only screen and (max-width: 1200px) {
   .EditCart {
-    width: 30rem;
+    width: 31rem;
   }
   .checkoutContainer {
     width: 250px;
+    margin-left: 2.4rem;
   }
+  
 }
 @media only screen and (max-width: 855px) {
   .checkoutBox{
@@ -218,6 +220,9 @@
   }
   .cartItemContainer{
     width: 100%;
+  }
+  .imageText{
+    justify-content: space-evenly;
   }
 
 }
