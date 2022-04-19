@@ -22,7 +22,7 @@ export default function Product({ productData }) {
           <h6 className={productCSS.productTitle}>
             {productData.title}(${productData.price})
           </h6>
-          <p>{productData.description}</p>
+          <p className='text-center'>{productData.description}</p>
           
             <Link to={`/product:${productData.id}`}>
               <button onClick={() => loadCurrentItem(productData)} className={productCSS.btn}>View Item</button>

@@ -1,5 +1,5 @@
 .aboutContainer{
-    height: 100vh;
+    
     /* margin-top: 7rem; */
     display: flex;
     justify-content:center;
@@ -15,6 +15,7 @@
 }
 
 .text{
+    font-size: 18px;
     width: 30rem;
     margin-left: 2rem;
     margin-top: 3.5rem;

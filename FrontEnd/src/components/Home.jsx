@@ -3,6 +3,7 @@ import Intro from './intro/Intro';
 import Products from './product/Products';
 import { ToastContainer, toast } from 'react-toastify';
 import Footer from './footer/Footer';
+import HomeAboutMe from './aboutMe/HomeAboutMe';
 
 export default function Home() {
   const [message, setMessage] = useState();
@@ -27,6 +28,7 @@ export default function Home() {
     <>
       {message && <ToastContainer position="top-center" />}
       <Intro />
+      <HomeAboutMe />
       <Products />
       <Footer />
     </>
