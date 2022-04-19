@@ -10,7 +10,7 @@ export default function ViewItem() {
   const { currentItem, addToCart } = useContext(shoppingContext);
 
   // chose to do it this way to avoid dangerouseInsertHTML
-      const {title, image, description, descriptionLong} = currentItem
+      const {title, image, description} = currentItem
 
       
        
@@ -31,11 +31,11 @@ export default function ViewItem() {
          
             <p>
              {description}
-            <div dangerouslySetInnerHTML={{__html: descriptionLong}} />
+            {/* <div dangerouslySetInnerHTML={{__html: descriptionLong}} /> */}
             {/* If I switch to a DB make sure to use DomPurify */}
             </p>
           
-          <span className='d-flex justify-content-center m-3'>
+          <span className={`d-flex justify-content-center m-3 ${viewCSS.buttons}`}>
             <Link to="/">
               <button className={viewCSS.btn}>Home</button>
             </Link>
