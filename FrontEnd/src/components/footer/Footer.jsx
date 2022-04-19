@@ -5,7 +5,7 @@ import footerCSS from './footer.module.css';
 export default function Footer() {
   return (
     <>
-      <div id="contact" className={footerCSS.footerContainer}>
+      <footer id="contact" className={footerCSS.footerContainer}>
         <h3 className={footerCSS.title}>Contact Information</h3>
         <span className="d-flex justify-content-center w-75">
           {/* <img className={footerCSS.image} src={image} alt="Me" /> */}
@@ -59,7 +59,7 @@ export default function Footer() {
             </div>
           </div>
         </span>
-      </div>
+      </footer>
     </>
   );
 }
