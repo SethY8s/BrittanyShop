@@ -28,7 +28,7 @@ export default function Product({ productData }) {
               <button onClick={() => loadCurrentItem(productData)} className={productCSS.btn}>View Item</button>
             </Link>
 
-            <button className={productCSS.btn} onClick={() => addToCart(productData.id)}>
+            <button onClick={() => addToCart(productData.id)} className={productCSS.btn}>
               Add to Cart
             </button>
           

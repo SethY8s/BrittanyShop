@@ -5,8 +5,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import Footer from './footer/Footer';
 
 export default function Home() {
-  
-
   const [message, setMessage] = useState();
 
   useEffect(() => {
