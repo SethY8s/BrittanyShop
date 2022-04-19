@@ -3,13 +3,14 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 7rem;
 }
 
 .buyDirectly {
   text-align: center;
   font-family: 'Old Standard TT', Serif;
   font-size: 46px;
-  margin-top: 4rem;
+  margin-top: 8rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
   border-top: 2px solid black;
@@ -110,6 +111,9 @@
     width: 24rem;
     margin: 1.25rem 1.25rem;
   }
+  .parentContainer{
+    margin-top: 3rem;
+  }
   
 }
 
@@ -117,6 +121,9 @@
   .productContainer{
     width: 85%;
     margin: 1.25rem 1.25rem;
+  }
+  .buyDirectly{
+    margin-top: 0;
   }
   
 }

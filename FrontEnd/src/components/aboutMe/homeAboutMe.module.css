@@ -1,9 +1,10 @@
 .aboutContainer{
-    
+    margin-top: 8rem;
     /* margin-top: 7rem; */
     display: flex;
     justify-content:center;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .myImage{
@@ -36,6 +37,13 @@
 .text{
     margin-left: 0;
 }
+}
+
+@media only screen and (max-width: 500px) {
+    .aboutContainer{
+        margin-top: 0rem;
+        margin-bottom: 2.5rem;
+    }
 }
 
 @media only screen and (max-width: 550px) {
