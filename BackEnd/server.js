@@ -13,9 +13,6 @@ app.use(cors());
 const PORT = process.env.PORT || 4000;
 
 
-// const YOUR_DOMAIN = 'http://localhost:4242';
-
-
 const storeItems = new Map([
   [1, { price: 'price_1KnhrqEjQbs32fBJCfu2LmC9', quantity: 1 }],
   [2, { price: 'price_1KnhxoEjQbs32fBJdPIYcM8J', quantity: 1 }],
