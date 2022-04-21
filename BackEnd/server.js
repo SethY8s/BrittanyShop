@@ -12,7 +12,6 @@ app.use(cors());
 
 const PORT = process.env.PORT || 4000;
 
-
 const storeItems = new Map([
   [1, { price: 'price_1KnhrqEjQbs32fBJCfu2LmC9', quantity: 1 }],
   [2, { price: 'price_1KnhxoEjQbs32fBJdPIYcM8J', quantity: 1 }],
@@ -25,11 +24,11 @@ const storeItems = new Map([
 app.post('/create-checkout-session', async (req, res) => {
   const item = req.body.carts;
 
+  console.log(item);
+
   const items = item.map((item) => {
     return storeItems.get(item.id);
   });
-
-  console.log(items);
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
