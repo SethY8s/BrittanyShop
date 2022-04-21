@@ -24,8 +24,8 @@
 .imagecontainer{
   width: 100%;
 background-color: #3d6d79;
-display: inline-flex;
-justify-content: center;
+/* display: inline-flex;
+justify-content: center; */
 padding: 8rem 0 2rem;
 }
 
