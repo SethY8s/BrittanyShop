@@ -17,7 +17,7 @@ export default function ViewItem() {
           
     
   return (
-    <div className=" d-flex justify-content-center">
+    // <div className="d-flex justify-content-center">
       <div className={viewCSS.viewItemContainer}>
         <div className={viewCSS.imagecontainer}>
           <img
@@ -45,6 +45,6 @@ export default function ViewItem() {
           </span>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
