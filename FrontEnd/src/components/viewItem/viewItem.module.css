@@ -33,10 +33,6 @@ padding: 8rem 0 2rem;
   margin-top: 2rem;
 }
 
-.ios-strech-fix
-{
-      height: intrinsic;
-}
 
 .btn{
   font-size: 18px;
@@ -83,6 +79,7 @@ padding: 8rem 0 2rem;
     width: 90%;
     height: fit-content;
     box-shadow: none;
+    object-fit: cover;
   }
 }
 @media only screen and (max-width: 450px) {

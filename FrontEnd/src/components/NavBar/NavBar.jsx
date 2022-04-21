@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 
+
 import navbarCSS from './navbar.module.css';
 import ShoppingContext from '../../context/shopping-context';
 
@@ -10,6 +11,7 @@ export default function NavBar() {
   const location = useLocation()
 
   const [cartCount, setCartCount] = useState(0);
+  const [expanded, setExpanded] = useState(false);
 
  
   useEffect(() => {
@@ -29,24 +31,24 @@ export default function NavBar() {
   
 
   return (
-    <Navbar collapseOnSelect fixed="top" className="py-3" bg="light" expand="lg">
+    <Navbar expanded={expanded} fixed="top" className="py-3" bg="light" expand="lg">
       <Container fluid>
         <Link style={{ textDecoration: 'none' }} to="/">
           <Navbar.Brand href="#home">
             <span className={navbarCSS.art}>Brittany's Art</span>
           </Navbar.Brand>
         </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle onClick={() => setExpanded(expanded ? false : "expanded")} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className={navbarCSS.cartbtn}>
           <Nav>
             <span className="d-flex flex-column flex-lg-row me-4 align-items-lg-center">
-              <Link style={{ textDecoration: 'none' }} to="/AboutMe">  <Nav.Item className={navbarCSS.navLink} >
+              <Link onClick={() => setExpanded(false)} style={{ textDecoration: 'none' }} to="/AboutMe">  <Nav.Item className={navbarCSS.navLink} >
                 About me
               </Nav.Item></Link>
-              <Nav.Link eventKey="1" style={{ color: 'black' }} className={navbarCSS.navLink} href="../#art">
+              <Nav.Link onClick={() => setExpanded(false)} style={{ color: 'black' }} className={navbarCSS.navLink} href="../#art">
                 Art
               </Nav.Link>
-              <Nav.Link eventKey="2" style={{ color: 'black' }} className={navbarCSS.navLink} href="../#contact">
+              <Nav.Link onClick={() => setExpanded(false)} style={{ color: 'black' }} className={navbarCSS.navLink} href="../#contact">
                 Contact
               </Nav.Link>
             </span>
@@ -55,7 +57,7 @@ export default function NavBar() {
               {/* cart section */}
 
               <Link to="/cart">
-                <Button className="me-5" id={navbarCSS.cartbox}>
+                <Button onClick={() => setExpanded(false)} className="me-5" id={navbarCSS.cartbox}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
