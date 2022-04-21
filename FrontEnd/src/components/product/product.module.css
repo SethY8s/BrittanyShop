@@ -100,10 +100,10 @@
     width: 20rem;
     margin: 1.25rem 1.25rem;
   }
-  .btn{
+  /* .btn{
     width: 145px;
     padding: 6px;
-  }
+  } */
 }
 
 @media only screen and (max-width: 720px) {
@@ -133,10 +133,10 @@
     width: 95%;
     margin: 1.25rem 1.25rem;
   }
-  .btn{
+  /* .btn{
     width: 125px;
     padding: 1px;
-  }
+  } */
   
   
 }
