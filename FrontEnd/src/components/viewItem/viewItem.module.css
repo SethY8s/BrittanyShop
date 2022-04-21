@@ -3,11 +3,11 @@
 
 .viewItemContainer {
     /* margin-top: 8rem; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    /* width: 100%; */
     text-align: center;
   
 }
@@ -31,6 +31,11 @@ padding: 8rem 0 2rem;
 
 .viewText{
   margin-top: 2rem;
+}
+
+.ios-strech-fix
+{
+      height: intrinsic;
 }
 
 .btn{

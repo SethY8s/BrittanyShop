@@ -10,7 +10,7 @@ export default function ViewItem() {
   const { currentItem, addToCart } = useContext(shoppingContext);
 
   // chose to do it this way to avoid dangerouseInsertHTML
-      const {title, image, description} = currentItem
+      const {title, image, description, price} = currentItem
 
       
        
@@ -27,7 +27,7 @@ export default function ViewItem() {
           />
         </div>
         <div className={viewCSS.viewText}>
-          <h2>{title}</h2>
+          <h2>{title} (${price})</h2>
          
             <p>
              {description}

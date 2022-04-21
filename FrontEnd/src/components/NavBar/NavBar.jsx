@@ -43,10 +43,10 @@ export default function NavBar() {
               <Link style={{ textDecoration: 'none' }} to="/AboutMe">  <Nav.Item className={navbarCSS.navLink} >
                 About me
               </Nav.Item></Link>
-              <Nav.Link style={{ color: 'black' }} className={navbarCSS.navLink} href="../#art">
+              <Nav.Link eventKey="1" style={{ color: 'black' }} className={navbarCSS.navLink} href="../#art">
                 Art
               </Nav.Link>
-              <Nav.Link style={{ color: 'black' }} className={navbarCSS.navLink} href="../#contact">
+              <Nav.Link eventKey="2" style={{ color: 'black' }} className={navbarCSS.navLink} href="../#contact">
                 Contact
               </Nav.Link>
             </span>
