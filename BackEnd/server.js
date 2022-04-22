@@ -24,11 +24,13 @@ const storeItems = new Map([
 app.post('/create-checkout-session', async (req, res) => {
   const item = req.body.carts;
 
-  console.log(item);
+  
 
   const items = item.map((item) => {
     return storeItems.get(item.id);
   });
+
+  console.log(items);
 
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
