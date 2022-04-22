@@ -28,7 +28,7 @@ const ProductDisplay = () => {
     setLoading(true);
 
 
-  //  http://localhost:3000/
+ 
     try {
       const resp = await axios.post(
         'https://brit-art-shop.herokuapp.com/create-checkout-session',
