@@ -64,7 +64,7 @@ export default function NavBar() {
         />
         <Navbar.Collapse id="basic-navbar-nav" className={navbarCSS.cartbtn}>
           <Nav>
-            <span className="d-flex flex-column flex-lg-row me-4 align-items-lg-center">
+            <span className="d-flex flex-column mt-3 mt-lg-0 flex-lg-row me-4 align-items-lg-center">
               <Link
                 onClick={() => setExpanded(false)}
                 style={{ textDecoration: 'none' }}
@@ -73,18 +73,20 @@ export default function NavBar() {
                 {' '}
                 <Nav.Item className={navbarCSS.navLink}>About me</Nav.Item>
               </Link>
+
               <Nav.Link
                 onClick={() => setExpanded(false)}
                 style={{ color: 'black' }}
-                className={navbarCSS.navLink}
+                className={`mt-2 ${navbarCSS.navLink}`}
                 href="../#art"
               >
                 Art
               </Nav.Link>
+
               <Nav.Link
                 onClick={() => setExpanded(false)}
                 style={{ color: 'black' }}
-                className={navbarCSS.navLink}
+                className={`mb-2 ${navbarCSS.navLink}`}
                 href="../#contact"
               >
                 Contact
@@ -97,7 +99,7 @@ export default function NavBar() {
               <Link to="/cart">
                 <Button
                   onClick={() => setExpanded(false)}
-                  className="me-5"
+                  className="me-lg-5"
                   id={navbarCSS.cartbox}
                 >
                   <svg

@@ -209,6 +209,9 @@
   .description{
     margin: 0;
   }
+  .imageText{
+    margin-top: 4px;
+  }
 
 }
 @media only screen and (max-width: 355px) {
