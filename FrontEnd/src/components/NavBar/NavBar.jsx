@@ -77,7 +77,7 @@ export default function NavBar() {
               <Nav.Link
                 onClick={() => setExpanded(false)}
                 style={{ color: 'black' }}
-                className={`mt-2 ${navbarCSS.navLink}`}
+                className={`mt-2 mt-lg-0 ${navbarCSS.navLink}`}
                 href="../#art"
               >
                 Art
@@ -86,7 +86,7 @@ export default function NavBar() {
               <Nav.Link
                 onClick={() => setExpanded(false)}
                 style={{ color: 'black' }}
-                className={`mb-2 ${navbarCSS.navLink}`}
+                className={`mb-2 mb-lg-0 ${navbarCSS.navLink}`}
                 href="../#contact"
               >
                 Contact

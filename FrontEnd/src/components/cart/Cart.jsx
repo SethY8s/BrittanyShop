@@ -51,7 +51,7 @@ export default function Cart() {
             <CartAction />
           </div>
         </div>
-        <p className={cartCSS.stripeText}>CheckOut is Through Stripe Payment</p>
+        <p className={cartCSS.stripeText}>Please be patient as you get redirected to Stripe Payment</p>
         </div>
         {/* items */}
         <div className={cartCSS.EditCart}>

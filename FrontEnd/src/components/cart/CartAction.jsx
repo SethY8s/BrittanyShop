@@ -7,6 +7,7 @@ import cartCSS from './cart.module.css';
 const ProductDisplay = () => {
   const { cart } = useContext(shoppingContext);
   const [loading, setLoading] = useState(false);
+  const [checkout, setCheckout] = useState(false);
 
   toast.info('Add items to checkout', {
     toastId: '2',
@@ -26,7 +27,7 @@ const ProductDisplay = () => {
 
   async function postCart() {
     setLoading(true);
-
+    setCheckout(true);
 
  
     try {
@@ -55,6 +56,7 @@ const ProductDisplay = () => {
       >
         CheckOut
       </button>
+      {checkout && <h2>it worked</h2>}
       {cart.length === 0 && <ToastContainer />}
     </section>
   );

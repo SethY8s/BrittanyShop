@@ -51,6 +51,22 @@
     height: 300px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  
+  .btn{
+    transition: none;
+  }
+  .btn:hover {
+    background-color:#d69d66;
+    transform: none;
+  }
+  .btn:active {
+    background-color:#3d6d79;
+  }
+  
+}
+
 @media only screen and (max-width: 640px) {
   .image {
     height: 200px;
