@@ -24,6 +24,7 @@
   margin: 4rem 2.5rem;
   transition: all 0.2s ease-in-out;
 }
+
 .actualproductContainer {
   display: flex;
   flex-direction: column;
@@ -100,10 +101,25 @@
     width: 20rem;
     margin: 1.25rem 1.25rem;
   }
-  /* .btn{
-    width: 145px;
-    padding: 6px;
-  } */
+ 
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .productContainer:hover {
+    transform: none;
+  }
+  .btn{
+    transition: none;
+  }
+  .btn:hover {
+    background-color:#d69d66;
+    transform: none;
+  }
+  .btn:active {
+    background-color:#3d6d79;
+  }
+  
 }
 
 @media only screen and (max-width: 720px) {
