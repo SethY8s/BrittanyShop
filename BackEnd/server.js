@@ -65,8 +65,8 @@ app.post('/create-checkout-session', async (req, res) => {
     line_items: items,
 
     mode: 'payment',
-    success_url: `https://brittanyshop.netlify.app/Thankyou?success=true`,
-    cancel_url: `https://brittanyshop.netlify.app/?canceled=true`,
+    success_url: `https://brittany-art.com/Thankyou?success=true`,
+    cancel_url: `https://brittany-art.com/?canceled=true`,
   });
 
   res.json({ url_: session.url });
