@@ -29,7 +29,6 @@ const ProductDisplay = () => {
     setLoading(true);
     setCheckout(true);
 
- 
     try {
       const resp = await axios.post(
         'https://brit-art-shop.herokuapp.com/create-checkout-session',
@@ -56,7 +55,7 @@ const ProductDisplay = () => {
       >
         CheckOut
       </button>
-      {checkout && <h2>it worked</h2>}
+      {checkout && <span> loading ...</span>}
       {cart.length === 0 && <ToastContainer />}
     </section>
   );

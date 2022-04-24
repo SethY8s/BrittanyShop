@@ -15,7 +15,7 @@ export default function CartItem({ itemData }) {
         alt="painting"
       />
       
-        <div className={`ms-1 ${cartItemCSS.nameDesc}`}>
+        <div className={` ${cartItemCSS.nameDesc}`}>
         <h6 className={cartItemCSS.title}>{itemData.title}</h6>
         <p className={cartItemCSS.description}>{itemData.description}</p>
         {/* <div className='d-flex justify-content-between'> */}

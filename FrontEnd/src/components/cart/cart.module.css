@@ -29,7 +29,6 @@
 
 .priceRemove {
   display: flex;
-  
   justify-content: space-between;
   border-bottom: 1px solid black;
 }
@@ -43,7 +42,7 @@
 }
 .priceAdjustment {
   margin: 0;
-  margin-left: 6rem;
+  margin-left: 7rem;
 }
 .itemsinCheckoutCart {
   display: flex;
@@ -59,7 +58,7 @@
 }
 
 .stripeText {
-  margin-left: 4.5rem;
+  margin-left: 3.5rem;
   color: orange;
   font-size: 11px;
 }
@@ -86,9 +85,9 @@
 .title {
   font-size: 12px;
 }
-/* .nameDesc {
-  width: 19rem;
-} */
+.nameDesc {
+  margin-left: 5px;
+}
 .removeItem {
   margin-right: 2rem;
 }
@@ -97,10 +96,10 @@
 }
 .imageText {
   display: flex;
-  width: 20rem;
+  width: 20.18rem;
 }
 .priceInItem{
-  margin-right: 2.5rem;
+  margin-right: 2.6rem;
 }
 .priceItemUnderDes{
   display: none;
@@ -148,6 +147,10 @@
     padding: 1rem;
     margin-top: 3.5rem;
   }
+  .stripeText{
+    margin-left: 4.5rem;
+    margin-top: 0rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -172,7 +175,7 @@
     height: 75px;
   }
   .priceAdjustment{
-    margin-left: 1.5rem;
+    margin-left: 3rem;
   }
   .priceInItem{
     position: relative;
@@ -186,6 +189,10 @@
   }
   .textUnderCart{
     width: 100%;
+  }
+  .stripeText{
+    text-align: center;
+    margin: 1rem;
   }
   
 }
@@ -228,4 +235,20 @@
     justify-content: space-evenly;
   }
 
+}
+
+/* spinner */
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
