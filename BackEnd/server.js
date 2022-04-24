@@ -13,12 +13,12 @@ app.use(cors());
 const PORT = process.env.PORT || 4000;
 
 const storeItems = new Map([
-  [1, { price: 'price_1KnhrqEjQbs32fBJCfu2LmC9', quantity: 1 }],
-  [2, { price: 'price_1KnhxoEjQbs32fBJdPIYcM8J', quantity: 1 }],
-  [3, { price: 'price_1Kni0aEjQbs32fBJmTi4w0Hv', quantity: 1 }],
-  [4, { price: 'price_1Kni45EjQbs32fBJfDTYI2UK', quantity: 1 }],
-  [5, { price: 'price_1Kni5BEjQbs32fBJRfcPtC1H', quantity: 1 }],
-  [6, { price: 'price_1Kni6KEjQbs32fBJJOPXNdcD', quantity: 1 }],
+  [1, { price: 'price_1KsACaEjQbs32fBJHN3FGmCY', quantity: 1 }],
+  [2, { price: 'price_1KsADEEjQbs32fBJTr9TzWc0', quantity: 1 }],
+  [3, { price: 'price_1KsADoEjQbs32fBJaAzqh2aP', quantity: 1 }],
+  [4, { price: 'price_1KsAEQEjQbs32fBJPHNZWIDj', quantity: 1 }],
+  [5, { price: 'price_1KsAExEjQbs32fBJDkDBXDqd', quantity: 1 }],
+  [6, { price: 'price_1KsAFXEjQbs32fBJwxuXhMa8', quantity: 1 }],
 ]);
 
 app.post('/create-checkout-session', async (req, res) => {
@@ -42,7 +42,7 @@ app.post('/create-checkout-session', async (req, res) => {
         shipping_rate_data: {
           type: 'fixed_amount',
           fixed_amount: {
-            amount: 1500,
+            amount: 2000,
             currency: 'usd',
           },
           display_name: 'Free shipping',

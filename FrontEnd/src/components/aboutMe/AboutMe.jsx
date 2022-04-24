@@ -31,7 +31,7 @@ export default function AboutMe() {
           The movement of energy by the wind and water and the interactions with
           animals are all common themes in my art.
           <br />
-          <div className="mt-3 text-center">
+          <div className="mt-3 me-2 text-center">
             <b>
               View more of my art work and personal life &nbsp;
               <svg
