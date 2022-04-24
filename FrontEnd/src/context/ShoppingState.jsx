@@ -24,7 +24,7 @@ export default function ShoppingState(props) {
         title: 'Mama Bear and Cubs',
         description: '24"x12" inch, Acrylic Painting,  on Canvas.',
         descriptionLong: '<h2>hello</h2>',
-        price: 420.0,
+        price: 450.0,
         image: bear,
       },
       {
@@ -32,7 +32,7 @@ export default function ShoppingState(props) {
         title: 'Still Pond and Pine',
         description:
           '14"x14" inch, Oil Painting, on Canvas.',
-        price: 220.0,
+        price: 295.0,
         image:
           stillPond,
       },
@@ -41,7 +41,7 @@ export default function ShoppingState(props) {
         title: 'Fox in Woods',
         description:
           '18"x14" inch, Oil Painting, on Canvas.',
-        price: 280.0,
+        price: 340.0,
         image:
           foxInWoods,
       },
@@ -50,7 +50,7 @@ export default function ShoppingState(props) {
         title: 'Autumn at Glacial',
         description:
           '20"x16" inch, Oil Painting, on Canvas.',
-        price: 295.0,
+        price: 450.0,
         image: autumn,
       },
       {
@@ -58,7 +58,7 @@ export default function ShoppingState(props) {
         title: 'Fox Mandala',
         description:
           '10"x10" inch, Acrylic Painting, on Canvas.',
-        price: 120.0,
+        price: 160.0,
         image: foxMandala,
       },
       {
@@ -66,7 +66,7 @@ export default function ShoppingState(props) {
         title: 'YellowStone Falls',
         description:
           '16"x20" inch, Oil Painting, on Canvas',
-        price: 496.0,
+        price: 520.0,
         image: yellowStone,
       },
     ],
