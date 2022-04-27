@@ -50,7 +50,7 @@ export default function ShoppingState(props) {
         title: 'Autumn at Glacial',
         description:
           '20"x16" inch, Oil Painting, on Canvas.',
-        price: 450.0,
+        price: 460.0,
         image: autumn,
       },
       {

@@ -42,7 +42,8 @@ app.post('/create-checkout-session', async (req, res) => {
         shipping_rate_data: {
           type: 'fixed_amount',
           fixed_amount: {
-            amount: 2000,
+            amount: 0000,
+            // this
             currency: 'usd',
           },
           display_name: 'Free shipping',
