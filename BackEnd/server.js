@@ -42,7 +42,7 @@ app.post('/create-checkout-session', async (req, res) => {
         shipping_rate_data: {
           type: 'fixed_amount',
           fixed_amount: {
-            amount: 0000,
+            amount: 0100,
             // this
             currency: 'usd',
           },
