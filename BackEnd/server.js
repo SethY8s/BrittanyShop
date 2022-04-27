@@ -13,12 +13,12 @@ app.use(cors());
 const PORT = process.env.PORT || 4000;
 
 const storeItems = new Map([
-  [1, { price: 'price_1KsACaEjQbs32fBJHN3FGmCY', quantity: 1 }],
-  [2, { price: 'price_1KsADEEjQbs32fBJTr9TzWc0', quantity: 1 }],
-  [3, { price: 'price_1KsADoEjQbs32fBJaAzqh2aP', quantity: 1 }],
-  [4, { price: 'price_1KsAEQEjQbs32fBJPHNZWIDj', quantity: 1 }],
-  [5, { price: 'price_1KsAExEjQbs32fBJDkDBXDqd', quantity: 1 }],
-  [6, { price: 'price_1KsAFXEjQbs32fBJwxuXhMa8', quantity: 1 }],
+  [1, { price: 'price_1KtC6wEjQbs32fBJUMdD12ol', quantity: 1 }],
+  [2, { price: 'price_1KtCFNEjQbs32fBJzTiL3RnQ', quantity: 1 }],
+  [3, { price: 'price_1KtCBoEjQbs32fBJ7dWe69vq', quantity: 1 }],
+  [4, { price: 'price_1KtCCQEjQbs32fBJxhCBKeAE', quantity: 1 }],
+  [5, { price: 'price_1KtCDDEjQbs32fBJSFw8xvpS', quantity: 1 }],
+  [6, { price: 'price_1KtCDsEjQbs32fBJZ3aKRlok', quantity: 1 }],
 ]);
 
 app.post('/create-checkout-session', async (req, res) => {
