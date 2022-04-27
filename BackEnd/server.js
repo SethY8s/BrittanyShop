@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 4000;
 
 const storeItems = new Map([
   [1, { price: 'price_1KtC6wEjQbs32fBJUMdD12ol', quantity: 1 }],
-  [2, { price: 'price_1KtCFNEjQbs32fBJzTiL3RnQ', quantity: 1 }],
+  [2, { price: 'price_1KtCAlEjQbs32fBJih4LpIOn', quantity: 1 }],
   [3, { price: 'price_1KtCBoEjQbs32fBJ7dWe69vq', quantity: 1 }],
   [4, { price: 'price_1KtCCQEjQbs32fBJxhCBKeAE', quantity: 1 }],
   [5, { price: 'price_1KtCDDEjQbs32fBJSFw8xvpS', quantity: 1 }],
@@ -23,8 +23,6 @@ const storeItems = new Map([
 
 app.post('/create-checkout-session', async (req, res) => {
   const item = req.body.carts;
-
-  console.log(item)
 
   const items = item.map((item) => {
     return storeItems.get(item.id);
@@ -42,7 +40,7 @@ app.post('/create-checkout-session', async (req, res) => {
         shipping_rate_data: {
           type: 'fixed_amount',
           fixed_amount: {
-            amount: 0100,
+            amount: 2000,
             // this
             currency: 'usd',
           },
