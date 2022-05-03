@@ -1,3 +1,4 @@
+# Brittany's Art
 Brittany's Shop is a shop that is designed to sell my client's artwork. 
 It was created with React, node, and the Stripe Payment API
 This repository has both the BackEnd and FrontEnd to this project, so keep that in mind when trying to run it.
