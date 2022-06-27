@@ -1,4 +1,5 @@
 // This is your test secret API key.
+// heroku login --> git init --> git add . --> git commit -am "" --> git subtree push --prefix BackEnd heroku master
 require('dotenv').config();
 
 const stripe = require('stripe')(process.env.stripeApiKey);

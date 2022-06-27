@@ -5,7 +5,7 @@ import { Navbar, Container, Nav, Button } from 'react-bootstrap';
 import navbarCSS from './navbar.module.css';
 import ShoppingContext from '../../context/shopping-context';
 
-export default function NavBar() {
+ function NavBar() {
   const { cart } = useContext(ShoppingContext);
   const location = useLocation();
 
@@ -121,3 +121,5 @@ export default function NavBar() {
     </Navbar>
   );
 }
+
+export default NavBar;

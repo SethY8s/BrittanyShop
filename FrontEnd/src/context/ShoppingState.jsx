@@ -1,12 +1,15 @@
 import React, { useReducer, useEffect } from 'react';
 import ShoppingContext from './shopping-context';
 import shoppingReducer from './shopping-reducer';
-import bear from '../images/bear.jpg'
-import stillPond from '../images/stillPond.jpg'
-import foxInWoods from '../images/foxInWoods.jpg'
-import autumn from '../images/autumnAtGlacial.jpg'
+import bear from '../images/bear.jpg';
+import stillPond from '../images/stillPond.jpg';
+import foxInWoods from '../images/foxInWoods.jpg';
+import autumn from '../images/autumnAtGlacial.jpg';
 import foxMandala from '../images/foxMandala.jpg';
-import yellowStone from '../images/yellowStoneFalls.jpg'
+import yellowStone from '../images/yellowStoneFalls.jpg';
+import acadia from '../images/acadiaPond.jpg';
+import sunflower from '../images/sunflower.jpg';
+import farmhouse from '../images/farmhouse.jpg';
 
 // can import images here and manually put them in state
 import {
@@ -30,44 +33,61 @@ export default function ShoppingState(props) {
       {
         id: 2,
         title: 'Still Pond and Pine',
-        description:
-          '14"x14" inch, Oil Painting, on Canvas.',
+        description: '14"x14" inch, Oil Painting, on Canvas.',
         price: 295.0,
-        image:
-          stillPond,
+        image: stillPond,
       },
       {
         id: 3,
         title: 'Fox in Woods',
-        description:
-          '18"x14" inch, Oil Painting, on Canvas.',
+        description: '18"x14" inch, Oil Painting, on Canvas.',
         price: 340.0,
-        image:
-          foxInWoods,
+        image: foxInWoods,
       },
       {
         id: 4,
         title: 'Autumn at Glacial',
-        description:
-          '20"x16" inch, Oil Painting, on Canvas.',
+        description: '20"x16" inch, Oil Painting, on Canvas.',
         price: 460.0,
         image: autumn,
       },
       {
         id: 5,
         title: 'Fox Mandala',
-        description:
-          '10"x10" inch, Acrylic Painting, on Canvas.',
+        description: '10"x10" inch, Acrylic Painting, on Canvas.',
         price: 160.0,
         image: foxMandala,
       },
       {
         id: 6,
         title: 'YellowStone Falls',
-        description:
-          '16"x20" inch, Oil Painting, on Canvas',
+        description: '16"x20" inch, Oil Painting, on Canvas',
         price: 520.0,
         image: yellowStone,
+      },
+      {
+        id: 7,
+        title: 'Acadia National Park',
+        description: '24"x12" inch, Oil Painting, on Canvas.',
+        descriptionLong: '<h2>hello</h2>',
+        price: 450.0,
+        image: acadia,
+      },
+      {
+        id: 8,
+        title: 'Sunflower Mandala',
+        description: '16"x20" inch, Acrylic Painting, on Canvas.',
+        descriptionLong: '<h2>hello</h2>',
+        price: 180.0,
+        image: sunflower,
+      },
+      {
+        id: 9,
+        title: 'Farmhouse in Snow',
+        description: '20"x16" inch, Oil Painting,  on Canvas.',
+        descriptionLong: '<h2>hello</h2>',
+        price: 295.0,
+        image: farmhouse,
       },
     ],
     cart: JSON.parse(localStorage.getItem('cart') || '[]'),
@@ -95,7 +115,6 @@ export default function ShoppingState(props) {
       type: REMOVE_ALL_FROM_CART,
     });
   };
-
 
   const loadCurrentItem = (itemID, qty) => {
     dispatch({
