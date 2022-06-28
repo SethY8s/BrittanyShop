@@ -20,6 +20,9 @@ const storeItems = new Map([
   [4, { price: 'price_1KtCCQEjQbs32fBJxhCBKeAE', quantity: 1 }],
   [5, { price: 'price_1KtCDDEjQbs32fBJSFw8xvpS', quantity: 1 }],
   [6, { price: 'price_1KtCDsEjQbs32fBJZ3aKRlok', quantity: 1 }],
+  [7, { price: 'price_1LFRtWEjQbs32fBJfvfnakaj', quantity: 1 }],
+  [8, { price: 'price_1LFRv0EjQbs32fBJpg3ZrCSG', quantity: 1 }],
+  [9, { price: 'price_1LFRvzEjQbs32fBJTrajUpB0', quantity: 1 }],
 ]);
 
 app.post('/create-checkout-session', async (req, res) => {

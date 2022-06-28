@@ -67,7 +67,7 @@ export default function ShoppingState(props) {
       },
       {
         id: 7,
-        title: 'Acadia National Park',
+        title: 'Acadia National Park, Jordan Pond',
         description: '24"x12" inch, Oil Painting, on Canvas.',
         descriptionLong: '<h2>hello</h2>',
         price: 450.0,
