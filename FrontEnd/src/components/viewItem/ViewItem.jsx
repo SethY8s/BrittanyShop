@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 import shoppingContext from '../../context/shopping-context';
 
 export default function ViewItem() {
-  const { currentItem, addToCart } = useContext(shoppingContext);
+  // CHECKOUT DISABLED — addToCart unused while cart is off
+  // const { currentItem, addToCart } = useContext(shoppingContext);
+  const { currentItem } = useContext(shoppingContext);
 
   // chose to do it this way to avoid dangerouseInsertHTML
   const { title, image, description, price } = currentItem;
@@ -34,12 +36,13 @@ export default function ViewItem() {
           <Link to="/">
             <button className={viewCSS.btn}>Home</button>
           </Link>
-          <button
+          {/* CHECKOUT DISABLED */}
+          {/* <button
             className={viewCSS.btn}
             onClick={() => addToCart(currentItem.id)}
           >
             Add to Cart
-          </button>
+          </button> */}
         </span>
       </div>
     </div>

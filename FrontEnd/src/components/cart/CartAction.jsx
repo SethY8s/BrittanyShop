@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import shoppingContext from '../../context/shopping-context';
-import axios from 'axios';
+// CHECKOUT DISABLED — Stripe API
+// import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import cartCSS from './cart.module.css';
 
@@ -25,25 +26,26 @@ const ProductDisplay = () => {
 
   console.log(carts);
 
+  // CHECKOUT DISABLED — Stripe checkout session API call
   async function postCart() {
-    setLoading(true);
-    setCheckout(true);
-
-    try {
-      const resp = await axios.post(
-        'https://brit-art-shop.herokuapp.com/create-checkout-session',
-        // 'http://localhost:4000/create-checkout-session', POST, GET, DELETE, PUT
-        {
-          carts,
-        }
-      );
-      console.log(resp);
-
-      const { url_ } = resp.data;
-      window.location.href = url_;
-    } catch (error) {
-      console.log(error);
-    }
+    // setLoading(true);
+    // setCheckout(true);
+    //
+    // try {
+    //   const resp = await axios.post(
+    //     'https://brit-art-shop.herokuapp.com/create-checkout-session',
+    //     // 'http://localhost:4000/create-checkout-session', POST, GET, DELETE, PUT
+    //     {
+    //       carts,
+    //     }
+    //   );
+    //   console.log(resp);
+    //
+    //   const { url_ } = resp.data;
+    //   window.location.href = url_;
+    // } catch (error) {
+    //   console.log(error);
+    // }
   }
 
   return (
@@ -71,20 +73,20 @@ export default function CartAction() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    // Check to see if this is a redirect back from Checkout
-    const query = new URLSearchParams(window.location.search);
-
-    if (query.get('success')) {
-      setMessage('Order placed! You will receive an email confirmation.');
-      console.log(message);
-    }
-
-    if (query.get('canceled')) {
-      setMessage(
-        "Order canceled -- continue to shop around and checkout when you're ready."
-      );
-      console.log(message);
-    }
+    // CHECKOUT DISABLED — redirect back from Stripe Checkout
+    // const query = new URLSearchParams(window.location.search);
+    //
+    // if (query.get('success')) {
+    //   setMessage('Order placed! You will receive an email confirmation.');
+    //   console.log(message);
+    // }
+    //
+    // if (query.get('canceled')) {
+    //   setMessage(
+    //     "Order canceled -- continue to shop around and checkout when you're ready."
+    //   );
+    //   console.log(message);
+    // }
   }, [message]);
 
   return message ? <Message message={message} /> : <ProductDisplay />;

@@ -1,15 +1,20 @@
-import { useState, useContext, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+// CHECKOUT DISABLED — Button / ShoppingContext unused while cart is off
+// import { useState, useContext, useEffect, useRef } from 'react';
+// import { Link, useLocation } from 'react-router-dom';
+// import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
 import navbarCSS from './navbar.module.css';
-import ShoppingContext from '../../context/shopping-context';
+// import ShoppingContext from '../../context/shopping-context';
 
  function NavBar() {
-  const { cart } = useContext(ShoppingContext);
-  const location = useLocation();
+  // CHECKOUT DISABLED — cart count unused while cart is off
+  // const { cart } = useContext(ShoppingContext);
+  // const location = useLocation();
 
-  const [cartCount, setCartCount] = useState(0);
+  // const [cartCount, setCartCount] = useState(0);
   const [expanded, setExpanded] = useState(false);
 
   let navBarRef = useRef();
@@ -28,20 +33,22 @@ import ShoppingContext from '../../context/shopping-context';
     };
   });
 
-  useEffect(() => {
-    let count = 0;
-    cart.forEach((item) => {
-      count += item.qty;
-    });
-    setCartCount(count);
-  }, [cart, cartCount]);
+  // CHECKOUT DISABLED
+  // useEffect(() => {
+  //   let count = 0;
+  //   cart.forEach((item) => {
+  //     count += item.qty;
+  //   });
+  //   setCartCount(count);
+  // }, [cart, cartCount]);
   // use effect rerenders it twice
 
-  console.log(cart);
+  // console.log(cart);
 
-  if (location.pathname === '/Thankyou') {
-    return null;
-  }
+  // CHECKOUT DISABLED — Thankyou page was Stripe success
+  // if (location.pathname === '/Thankyou') {
+  //   return null;
+  // }
 
   return (
     <Navbar
@@ -93,9 +100,8 @@ import ShoppingContext from '../../context/shopping-context';
               </Nav.Link>
             </span>
 
-            <Nav.Item>
-              {/* cart section */}
-
+            {/* CHECKOUT DISABLED — cart button */}
+            {/* <Nav.Item>
               <Link to="/cart">
                 <Button
                   onClick={() => setExpanded(false)}
@@ -114,7 +120,7 @@ import ShoppingContext from '../../context/shopping-context';
                   <span>{cartCount}</span>
                 </Button>
               </Link>
-            </Nav.Item>
+            </Nav.Item> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -12,11 +12,11 @@ export default function Footer() {
           <div>
             <p className={footerCSS.notice}>
               <b>Notice:</b> Unfortunately at this time I am not accepting
-              painting requests. If you have questions about my art or have any
-              troubles with payment, feel free to contact me down below.
+              painting requests. Thank you for visiting and enjoying my art.
             </p>
 
-            <div className="d-flex justify-content-center flex-wrap">
+            {/* PERSONAL CONTACT REMOVED — email, phone, Instagram */}
+            {/* <div className="d-flex justify-content-center flex-wrap">
               <p className={footerCSS.icons}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ export default function Footer() {
                 </svg>
                 <span className="mx-3">brittanyyates1103</span>
               </p>
-            </div>
+            </div> */}
           </div>
         </span>
       </footer>

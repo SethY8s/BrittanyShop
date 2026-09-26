@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom';
 import ShoppingContext from '../../context/shopping-context';
 
 export default function Product({ productData }) {
-  const { addToCart, loadCurrentItem } = useContext(ShoppingContext);
+  // CHECKOUT DISABLED — addToCart unused while cart is off
+  // const { addToCart, loadCurrentItem } = useContext(ShoppingContext);
+  const { loadCurrentItem } = useContext(ShoppingContext);
   return (
     
       <div className={productCSS.productContainer}>
@@ -28,9 +30,10 @@ export default function Product({ productData }) {
               <button onClick={() => loadCurrentItem(productData)} className={productCSS.btn}>View Item</button>
             </Link>
 
-            <button onClick={() => addToCart(productData.id)} className={productCSS.btn}>
+            {/* CHECKOUT DISABLED */}
+            {/* <button onClick={() => addToCart(productData.id)} className={productCSS.btn}>
               Add to Cart
-            </button>
+            </button> */}
           
         </div>
       </div>

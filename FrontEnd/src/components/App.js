@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './NavBar/NavBar';
 import Home from './Home';
-import Cart from './cart/Cart';
+// CHECKOUT DISABLED
+// import Cart from './cart/Cart';
 import ViewItem from './viewItem/ViewItem';
-import OrderPlaced from './orderPlaced/OrderPlaced';
+// CHECKOUT DISABLED
+// import OrderPlaced from './orderPlaced/OrderPlaced';
 import AboutMe from './aboutMe/AboutMe';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -17,9 +19,11 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<Cart />} />
+            {/* CHECKOUT DISABLED */}
+            {/* <Route path="/cart" element={<Cart />} /> */}
             <Route path="/product:id" element={<ViewItem />} />
-            <Route path="/Thankyou" element={<OrderPlaced />} />
+            {/* CHECKOUT DISABLED */}
+            {/* <Route path="/Thankyou" element={<OrderPlaced />} /> */}
             <Route path="/AboutMe" element={<AboutMe />} />
           </Routes>
         </ShoppingState>
